@@ -10,33 +10,38 @@ import Typography from '@material-ui/core/Typography';
 import { Box, Grid } from '@material-ui/core';
 
 const Tarjeta = () => {
+  const cardStyle = {
+    width: '280px',
+    height: '310px',
+    borderRadius: 20
+  }
   return (
-    <Card variant="outlined">
-       <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Instrumento"
-          height="120"
-          image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Classical_Guitar_two_views.jpg/800px-Classical_Guitar_two_views.jpg"
-          title="Instrumento"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="h2">
-            Instrumento
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            $5.000,00
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
+      <Card style={cardStyle}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Instrumento"
+            height="150"
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Classical_Guitar_two_views.jpg/800px-Classical_Guitar_two_views.jpg"
+            title="Instrumento"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h4" component="h2">
+              Instrumento
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              $5.000,00
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
           <Grid container justifyContent="center">
-        <Button variant="contained"  size="small" color="primary" fullWidth>
-          Quick Shop
-          </Button>
+            <Button variant="contained" size="small" color="primary" fullWidth>
+              Quick Shop
+            </Button>
           </Grid>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
   );
 }
 
