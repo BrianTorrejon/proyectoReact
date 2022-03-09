@@ -7,17 +7,25 @@ import Tarjeta from './Tarjeta';
 export const ContenedorOfertas = () => {
   return (
     <>
-    <Grid component="h1" align="center">Ultimas <span>ofertas</span></Grid>
-    <Container>
-    <Grid container spacing={5} alignItems="flex-end" align="center">
-        <Tarjeta />
-        <Tarjeta />
-        <Tarjeta />
-        <Tarjeta />
-    </Grid>
-    </Container>
-    
-    </>
+ <Container>
+      <Grid component="h1" align="center">Ultimas <span>ofertas</span></Grid>
+      
+        <Grid container spacing={3} align="center">
+          <Grid item xs={12} md={6} lg={3}>
+            <Tarjeta />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <Tarjeta />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <Tarjeta />
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <Tarjeta />
+          </Grid>
+        </Grid>
+        </Container>
+        </>
   )
 }
 
