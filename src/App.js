@@ -1,6 +1,12 @@
+import ContenedorOfertas from "./components/ContenedorOfertas";
+
+
 function App() {
   return (
-        <div>Hola mundo</div>
+    <div>
+        <ContenedorOfertas/>
+        </div>
+  
   );
 }
 
