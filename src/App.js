@@ -1,10 +1,10 @@
-import ContenedorOfertas from "./components/ContenedorOfertas";
+import {RedesSociales} from './components/RedesSociales'
 
 
 function App() {
   return (
     <div>
-        <ContenedorOfertas/>
+        <RedesSociales/>
         </div>
   
   );
