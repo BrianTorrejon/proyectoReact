@@ -39,7 +39,6 @@ export const ContenedorOfertas = () => {
             )
           }
         </Grid>
-        {console.log(lista)}
       </Container>
     </>
   )
