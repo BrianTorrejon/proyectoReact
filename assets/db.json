@@ -1,0 +1,28 @@
+{
+    "ofertas": [
+        {
+            "id": 1,
+            "nombre": "Guitarra",
+            "precio": "$4.000,00",
+            "urlImg": "#"
+        },
+        {
+            "id": 2,
+            "nombre": "Bateria",
+            "precio": "$20.000,00",
+            "urlImg": "#"
+        },
+        {
+            "id": 3,
+            "nombre": "Bajo",
+            "precio": "$12.000,00",
+            "urlImg": "#"
+        },
+        {
+            "id": 4,
+            "nombre": "Teclado",
+            "precio": "$11.000,00",
+            "urlImg": "#"
+        }
+    ]
+}
