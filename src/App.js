@@ -1,6 +1,18 @@
+import React from 'react';
+import Nav from './Nav';
+import {Container, containerClasses} from '@mui/material';
+
+
+
+
+
 function App() {
   return (
-        <div>Hola mundo</div>
+    
+    <Container> 
+      Nav
+    </Container>
+
   );
 }
 
