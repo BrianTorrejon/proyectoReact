@@ -1,26 +1,40 @@
 import React from 'react';
-import {Appbar, box, tab, tabs,typography, toolbar, button, makestyles, Menu, MenuList} from '@mui/material';
-
-
-
+import {Appbar, Menu, MenuList, Toolbar, Box, Button, IconButton} from '@mui/material';
+import {link} from 'react-router-dom';
 
 
 
 function App() {
+    <>
+    const LinkButton =(props) => <Button color='primary' component={link} {...props} /> 
     return (
-        <Appbar>
-           <box>
-             {/* logo */}
-             </box>
+        <Appbar position= 'fixed'>
+            <Toolbar>
+                <Box>
+                {/* logo */}
+                </Box>
+                <Box>
+                {/* Drop Dows */}
+                <Menu>
+                <IconButton edge='start' color= 'inherit' arial-label= 'menu' ></IconButton>
+               
+                <LinkButton to='/'>
+                    Home
+                </LinkButton>
+                <LinkButton to='/categories'>
+                    Categories
+                </LinkButton>
+                </Menu>
+                
+                </Box>
 
-             <box>
-              {/* Drop Dows */}
-             </box>
-
-             <box>
-              {/* iconos */}
-             </box>
+                <Box>
+                {/* iconos */}
+                </Box>
+            </Toolbar>
         </Appbar>
-
     );
+    </>
   }
+
+  export default Nav
