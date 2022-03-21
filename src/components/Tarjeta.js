@@ -14,15 +14,34 @@ const useStyle = makeStyles({
     height: 335,
     borderRadius: 20
   },
-
   media: {
     width: 280,
     height: 160
   },
-
   mediaLarge: {
     width: 100,
     height: 160
+  },
+  nombre: {
+    fontSize: '18px',
+    fontWeight: 600
+  },
+  precio: {
+    fontWeight: 600,
+    color: '#503BD9',
+    fontSize: '24px'
+  },
+  precioAnt: {
+    fontSize: '16px'
+  },
+  boton: {
+    fontSize: '18px',
+    background: '#503BD9',
+    color: 'white',
+    '&:hover': { 
+      backgroundColor: '#4230B3',
+      color: 'white'
+    }
   }
 })
 
@@ -46,7 +65,7 @@ const Tarjeta = ({ offer }) => {
     <Card className={classes.root}>
       <CardActionArea>
         {
-          height > width ?
+          height > width ? //Verifica que la altura de la img sea mayor al ancho de la img y le da un width correspondiente
             <CardMedia
               className={classes.mediaLarge}
               image={offer.urlImg}
@@ -60,17 +79,17 @@ const Tarjeta = ({ offer }) => {
         }
 
         <CardContent>
-          <Typography gutterBottom variant="h4" component="h2">
+          <Typography gutterBottom component="h2" className={classes.nombre}>
             {offer.nombre}
           </Typography>
           <Grid container alignItems="center" spacing={1} justifyContent="center">
             <Grid item>
-              <Typography variant="body1" color="textSecondary" component="p">
+              <Typography variant="body1" component="p" className={classes.precio}>
                 {offer.precio}
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body2" color="textSecondary">
+              <Typography variant="body2" color="textSecondary" className={classes.precioAnt}>
                 <strike>{offer.precioAnterior}</strike>
               </Typography>
             </Grid>
@@ -80,7 +99,7 @@ const Tarjeta = ({ offer }) => {
       <CardActions>
         <Grid container justifyContent="center">
           <Box width="90%">
-            <Button variant="contained" size="small" color="primary" fullWidth>
+            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton}>
               Quick Shop
             </Button>
           </Box>

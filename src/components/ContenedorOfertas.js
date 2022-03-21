@@ -4,10 +4,16 @@ import Container from '@material-ui/core/Container';
 import Tarjeta from './Tarjeta';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { makeStyles } from '@material-ui/core';
 
+const useStyle = makeStyles({
+    span:{
+      color: '#503BD9'
+    }
+  })
 
 export const ContenedorOfertas = () => {
-
+  const classes = useStyle();
   const [lista, setLista] = useState([]);
 
   const cargarOfertas = async () => {
@@ -18,17 +24,15 @@ export const ContenedorOfertas = () => {
     setLista(ofertas);
   };
 
-
   useEffect(() => {
     cargarOfertas()
   }
     , [])
 
-
   return (
     <>
       <Container>
-        <Grid component="h1" align="center">Ultimas <span>ofertas</span></Grid>
+        <Grid component="h1" align="center">Ultimas <span className={classes.span}>ofertas</span></Grid>
         <Grid container spacing={3} align="center">
           {
             lista.map((oferta) =>
