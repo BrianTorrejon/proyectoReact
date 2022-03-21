@@ -7,6 +7,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid, makeStyles } from '@material-ui/core';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const useStyle = makeStyles({
   root: {
@@ -38,7 +43,7 @@ const useStyle = makeStyles({
     fontSize: '18px',
     background: '#503BD9',
     color: 'white',
-    '&:hover': { 
+    '&:hover': {
       backgroundColor: '#4230B3',
       color: 'white'
     }
@@ -46,9 +51,23 @@ const useStyle = makeStyles({
 })
 
 const Tarjeta = ({ offer }) => {
+  const [abrir, setAbrir] = useState(false)
   const classes = useStyle();
   const [width, setwidth] = useState(0)
   const [height, setheight] = useState(0)
+
+  const handleAbrir = () => {
+    setAbrir(true)
+  }
+
+  const handleCerrar = () => {
+    setAbrir(false)
+  }
+
+  const handleAgregar = () =>{
+    handleCerrar();
+    alert("El producto se agrego exitosamente");
+  }
 
   function getMeta(url) {
     var img = new Image();
@@ -62,21 +81,18 @@ const Tarjeta = ({ offer }) => {
   getMeta(offer.urlImg)
 
   return (
-    <Card className={classes.root}>
+    <><Card className={classes.root}>
       <CardActionArea>
-        {
-          height > width ? //Verifica que la altura de la img sea mayor al ancho de la img y le da un width correspondiente
-            <CardMedia
-              className={classes.mediaLarge}
-              image={offer.urlImg}
-              title="Instrumento" />
+        {height > width ? //Verifica que la altura de la img sea mayor al ancho de la img y le da un width correspondiente
+          <CardMedia
+            className={classes.mediaLarge}
+            image={offer.urlImg}
+            title="Instrumento" />
 
-            : <CardMedia
-              className={classes.media}
-              image={offer.urlImg}
-              title="Instrumento"
-            />
-        }
+          : <CardMedia
+            className={classes.media}
+            image={offer.urlImg}
+            title="Instrumento" />}
 
         <CardContent>
           <Typography gutterBottom component="h2" className={classes.nombre}>
@@ -99,13 +115,36 @@ const Tarjeta = ({ offer }) => {
       <CardActions>
         <Grid container justifyContent="center">
           <Box width="90%">
-            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton}>
+            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={handleAbrir}>
               Quick Shop
             </Button>
+            <Dialog
+              open={abrir}
+              onClose={handleCerrar}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">
+                {"Quiere agregar el producto al carrito?"}
+              </DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  {offer.nombre} <br/>
+                  Precio: {offer.precio}
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleCerrar}>Cerrar</Button>
+                <Button onClick={handleAgregar} autoFocus> {/* AGREGAR EL PRODUCTO AL CARRITO*/}
+                  Agregar
+                </Button>
+              </DialogActions>
+            </Dialog>
           </Box>
         </Grid>
       </CardActions>
     </Card>
+    </>
   );
 }
 
