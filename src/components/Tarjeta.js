@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -17,34 +17,46 @@ const useStyle = makeStyles({
 
   media: {
     width: 280,
-    height: 160,
+    height: 160
   },
 
   mediaLarge: {
     width: 100,
-    height: 160,
+    height: 160
   }
 })
 
 const Tarjeta = ({ offer }) => {
   const classes = useStyle();
-  const img = new Image();
-  img.src = offer.urlImg;
+  const [width, setwidth] = useState(0)
+  const [height, setheight] = useState(0)
+
+  function getMeta(url) {
+    var img = new Image();
+    img.onload = function () {
+      setwidth(Number(this.width))
+      setheight(Number(this.height))
+    };
+    img.src = url;
+  }
+
+  getMeta(offer.urlImg)
+
   return (
     <Card className={classes.root}>
       <CardActionArea>
         {
-          img.height > img.width ?
-        <CardMedia
-          className={classes.mediaLarge}
-          image={offer.urlImg}
-          title="Instrumento" />
+          height > width ?
+            <CardMedia
+              className={classes.mediaLarge}
+              image={offer.urlImg}
+              title="Instrumento" />
 
-        :<CardMedia
-          className={classes.media}
-          image={offer.urlImg}
-          title="Instrumento"
-        />
+            : <CardMedia
+              className={classes.media}
+              image={offer.urlImg}
+              title="Instrumento"
+            />
         }
 
         <CardContent>

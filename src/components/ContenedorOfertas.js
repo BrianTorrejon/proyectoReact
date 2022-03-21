@@ -14,7 +14,7 @@ export const ContenedorOfertas = () => {
 
     const ofertasUrl = "http://localhost:3000/ofertas";
     const resOfertas = await axios.get(ofertasUrl);
-    const ofertas = await resOfertas.data;
+    let ofertas = resOfertas.data;
     setLista(ofertas);
   };
 
