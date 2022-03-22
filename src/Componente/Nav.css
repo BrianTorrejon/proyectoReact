@@ -1,0 +1,23 @@
+.Users {
+    padding-left: 30px;
+ }
+ .Cart {
+    padding-left: 10px;
+ }
+ .Search {
+    padding-left: 10px;
+ }
+ .Marca {
+    background-image: url(/public/Sin\ título-1.png);
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    padding-bottom: -50px;
+    margin-left: 15px;
+}
+ .Marca h1{
+     padding-top: 125px;
+ }
+ .NombreMarca{
+    padding-left: 20px;
+ }
