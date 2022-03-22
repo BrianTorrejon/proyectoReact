@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import Nav from './Nav';
+import Nav from './Componente/Nav.js';
 
 
 
