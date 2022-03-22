@@ -1,12 +1,13 @@
 import { CssBaseline } from "@material-ui/core";
-import ContenedorOfertas from "./components/ContenedorOfertas";
+import Alerta from "./components/Alerta";
+
 
 
 function App() {
   return (
     <div>
       <CssBaseline/>
-        <ContenedorOfertas/>
+        <Alerta/>
         </div>
   
   );
