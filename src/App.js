@@ -1,12 +1,16 @@
-import ContenedorOfertas from "./components/ContenedorOfertas";
+import { CssBaseline } from "@material-ui/core";
+
 
 
 function App() {
   return (
-    <div>
-        <ContenedorOfertas/>
-        </div>
-  
+    <>
+      <CssBaseline />
+      <div>
+        banner Bienvenida
+      </div>
+    </>
+
   );
 }
 
