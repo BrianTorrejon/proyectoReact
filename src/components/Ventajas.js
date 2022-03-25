@@ -1,7 +1,7 @@
 import React from 'react'
 import TarjetaVentaja from './TarjetaVentaja'
 
-const Ventajas = () => {
+const Ventajas = () => { 
   return (
     <TarjetaVentaja/>
   )
