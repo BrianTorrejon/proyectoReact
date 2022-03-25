@@ -1,13 +1,11 @@
 import { CssBaseline } from "@material-ui/core";
-import Banner from "./components/Banner";
-
-
+import Ventajas from "./components/Ventajas";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Banner/>
+      <Ventajas/>
     </>
 
   );
