@@ -1,0 +1,15 @@
+.Speakers {
+    background-image: url(/public/Speakers.png);
+    width: 96px;
+    height: 96px;
+    background-repeat: no-repeat;
+  }
+  .Banner6 {
+    background-color:#EBA907;
+  }
+  .Slogan {
+    margin-top: 500px;
+    height: 200px;
+    width: 1512px;
+  }
+ 
