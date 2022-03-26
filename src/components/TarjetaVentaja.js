@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core'
 import React from 'react'
 
 const TarjetaVentaja = ({ icon, titulo, texto }) => {
