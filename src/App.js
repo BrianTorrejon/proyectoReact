@@ -1,18 +1,21 @@
-import { Box } from '@mui/material';
-import React from 'react';
-import Nav from './Componente/Nav.js';
-
-
-
-
-
+import React from "react";
+import Nav from "./Componente/Nav.js";
+import Banner6 from "./Componente/Banner6.js";
+import "./App.css"
+import Footer from "./Componente/Footer.js";
+import Imgytexto from "./Componente/Imgytexto.js";
 
 
 function App() {
   return (
-    <Box>
-   <Nav></Nav>
-   </Box>
+    <div>
+        <Nav/>
+       
+        <Banner6/>
+        <Imgytexto/>
+        <Footer/>
+    </div> 
+        
   );
 }
 
