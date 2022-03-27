@@ -5,11 +5,12 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import { Box } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 
 const Ventajas = () => {
     return (
         <>
+        <Grid component="h1" align="center"> ¿Por qué elejir <span>Sound On?</span></Grid>
             <Box style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                 <TarjetaVentaja
                     icon={<PianoIcon sx={{ fontSize: 48 }} />}
