@@ -5,31 +5,45 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, makeStyles } from '@material-ui/core';
+
+const useStyle = makeStyles({
+    span: {
+        color: '#503BD9'
+    },
+    box: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        "& .MuiSvgIcon-root": { fontSize: '48px' } //Regerencia al icono
+    }
+})
 
 const Ventajas = () => {
+
+    const classes = useStyle();
     return (
         <>
-        <Grid component="h1" align="center"> ¿Por qué elejir <span>Sound On?</span></Grid>
-            <Box style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Grid component="h1" align="center"> ¿Por qué elejir <span className={classes.span}>Sound On?</span></Grid>
+            <Box className={classes.box}>
                 <TarjetaVentaja
-                    icon={<PianoIcon sx={{ fontSize: 48 }} />}
+                    icon={<PianoIcon />}
                     titulo='Variedad'
                     texto='Gran variedad de intrumentos musicales de todas partes del mundo, dede lo mas convencional hasta lo mas insolito.' />
                 <TarjetaVentaja
-                    icon={<MusicNoteIcon sx={{ fontSize: 48 }} />}
+                    icon={<MusicNoteIcon />}
                     titulo='¿Cómo suena?'
                     texto='Podras hacer prueba de sonido de cualquier instrumento sin compromiso o podras solicitar un video en caso de ser de otra ciudad.' />
                 <TarjetaVentaja
-                    icon={<LocalShippingOutlinedIcon sx={{ fontSize: 48 }} />}
+                    icon={<LocalShippingOutlinedIcon />}
                     titulo='Envios gratis'
                     texto='Con cualquier compra que realices, el envio es gratis a cualquier punto del pais. Y si el monto supera los $15.000 se agregan regalos.' />
                 <TarjetaVentaja
-                    icon={<LocalOfferOutlinedIcon sx={{ fontSize: 48 }} />}
+                    icon={<LocalOfferOutlinedIcon />}
                     titulo='Descuentos exclusivos'
                     texto='Tendras descuentos exclusivos en tu segunda compra que realices.' />
                 <TarjetaVentaja
-                    icon={<WorkspacePremiumOutlinedIcon sx={{ fontSize: 48 }} />}
+                    icon={<WorkspacePremiumOutlinedIcon />}
                     titulo='Calidad'
                     texto='Contamos con un staff 100% calificado, y aseguramos la calidad de los instrumentos y sus respectivos accesorios' />
             </Box>
