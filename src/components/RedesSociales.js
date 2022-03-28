@@ -19,7 +19,11 @@ const useStyle = makeStyles({
       backgroundColor: "#503BD9",
       margin: 10,
       width: 60,
-      height: 60
+      height: 60,
+      '&:hover': {
+        backgroundColor: '#4230B3',
+        color: 'white'
+      }
     },
     '& .MuiSvgIcon-root': {
       color: '#D4D1FC',
