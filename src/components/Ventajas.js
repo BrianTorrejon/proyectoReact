@@ -5,16 +5,17 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
-import { Box, Grid, makeStyles } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles({
     span: {
         color: '#503BD9'
     },
-    box: {
+    contenedor: {
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
+        margin: 0,
         "& .MuiSvgIcon-root": { fontSize: '48px' } //Regerencia al icono
     }
 })
@@ -22,10 +23,12 @@ const useStyle = makeStyles({
 const Ventajas = () => {
 
     const classes = useStyle();
+
     return (
         <>
+
             <Grid component="h1" align="center"> ¿Por qué elejir <span className={classes.span}>Sound On?</span></Grid>
-            <Box className={classes.box}>
+            <Grid className={classes.contenedor} container spacing={4}>
                 <TarjetaVentaja
                     icon={<PianoIcon />}
                     titulo='Variedad'
@@ -46,7 +49,7 @@ const Ventajas = () => {
                     icon={<WorkspacePremiumOutlinedIcon />}
                     titulo='Calidad'
                     texto='Contamos con un staff 100% calificado, y aseguramos la calidad de los instrumentos y sus respectivos accesorios' />
-            </Box>
+            </Grid>
         </>
     )
 }

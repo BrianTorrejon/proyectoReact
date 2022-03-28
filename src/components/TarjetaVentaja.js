@@ -1,16 +1,26 @@
-import { Box, Typography } from '@material-ui/core'
+import {Typography, makeStyles, Grid } from '@material-ui/core'
 import React from 'react'
 
+const useStyle = makeStyles({
+    box: {
+        minHeight: '230px',
+        maxHeight: '301px',
+        maxWidth: '210px',
+        minWidth: '210px'
+    }
+})
+
 const TarjetaVentaja = ({ icon, titulo, texto }) => {
+
+    const classes = useStyle()
+
     return (
         <>
-
-            <Box m={4} style={{ minHeight: '301px', width: '210px', }}> {/* m = 4  son 32 px */}
+            <Grid item xs={12} sm className={classes.box}>
                 {icon}
                 <Typography variant='h5' >{titulo}</Typography>
                 <Typography variant='body1' >{texto}</Typography>
-            </Box>
-
+            </Grid>
         </>
     )
 }
