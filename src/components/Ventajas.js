@@ -13,7 +13,7 @@ const useStyle = makeStyles({
     },
     contenedor: {
         width: '100%',
-        margin: 0,
+        margin: '0', 
         "& .MuiSvgIcon-root": { fontSize: '48px' } //Regerencia al icono
     }
 })
@@ -24,7 +24,7 @@ const Ventajas = () => {
 
     return (
         <>
-
+        
             <Grid component="h1" align="center"> ¿Por qué elejir <span className={classes.span}>Sound On?</span></Grid>
             <Grid className={classes.contenedor} container spacing={4}>
                 <TarjetaVentaja
