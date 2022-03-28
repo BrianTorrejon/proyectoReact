@@ -1,5 +1,5 @@
 import { CssBaseline } from "@material-ui/core";
-import Banner from "./components/Banner";
+import Mision from "./components/Mision";
 
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Banner/>
+      <Mision/>
     </>
 
   );
