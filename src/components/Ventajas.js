@@ -13,8 +13,6 @@ const useStyle = makeStyles({
     },
     contenedor: {
         width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
         margin: 0,
         "& .MuiSvgIcon-root": { fontSize: '48px' } //Regerencia al icono
     }

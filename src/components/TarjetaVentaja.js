@@ -5,7 +5,6 @@ const useStyle = makeStyles({
     box: {
         minHeight: '230px',
         maxHeight: '301px',
-        maxWidth: '210px',
         minWidth: '210px'
     }
 })
