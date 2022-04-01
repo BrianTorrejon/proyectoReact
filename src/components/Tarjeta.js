@@ -12,6 +12,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate } from "react-router-dom";
 
 const useStyle = makeStyles({
   root: {
@@ -51,6 +52,9 @@ const useStyle = makeStyles({
 })
 
 const Tarjeta = ({ offer }) => {
+
+  let navigate = useNavigate();
+
   const [abrir, setAbrir] = useState(false)
   const classes = useStyle();
   const [width, setwidth] = useState(0)
@@ -64,7 +68,7 @@ const Tarjeta = ({ offer }) => {
     setAbrir(false)
   }
 
-  const handleAgregar = () =>{
+  const handleAgregar = () => {
     handleCerrar();
     alert("El producto se agrego exitosamente");
   }
@@ -115,7 +119,8 @@ const Tarjeta = ({ offer }) => {
       <CardActions>
         <Grid container justifyContent="center">
           <Box width="90%">
-            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={handleAbrir}>
+            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() =>
+              navigate("/Instrumento/"+ offer.id)}>
               Quick Shop
             </Button>
             <Dialog
@@ -129,7 +134,7 @@ const Tarjeta = ({ offer }) => {
               </DialogTitle>
               <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                  {offer.nombre} <br/>
+                  {offer.nombre} <br />
                   Precio: {offer.precio}
                 </DialogContentText>
               </DialogContent>

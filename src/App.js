@@ -1,12 +1,12 @@
 import { CssBaseline } from "@material-ui/core";
-import ContenedorOfertas from "./components/ContenedorOfertas";
+import Rutas from "./components/Rutas";
 
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <ContenedorOfertas />
+      <Rutas />
     </>
   );
 }
