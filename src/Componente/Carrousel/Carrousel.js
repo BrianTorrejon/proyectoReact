@@ -60,7 +60,7 @@ function Banner(props) {
 
 const items = [
   {
-    Name: "Tom Lee",
+    Name: "All of us loves all of you, and we'll take to you success",
     Image: "https://e7.pngegg.com/pngimages/295/235/png-clipart-tom-lee-music-vancouver-canadian-music-hall-of-fame-musical-instruments-musical-instruments-text-trademark.png", 
     contentPosition: "left",
     Items: [
@@ -75,8 +75,8 @@ const items = [
     ]
   },
   {
-    Name: "Home Appliances",
-    Caption: "Say no to manual home labour!",
+    Name: "We equip your Band",
+    Caption: "with the best Instruments!",
     contentPosition: "middle",
     Items: [
       {
@@ -84,14 +84,14 @@ const items = [
         Image: "https://www.ecured.cu/images/6/61/Lp_logo.jpg"
       },
       {
-        Name: "Logan",
-        Image: "https://www.nuestrasbandasdemusica.com/images/pilar/tiendas-de-musica/logan.jpg"
+        Name: "Fender",
+        Image: "https://www.lafabricadebordados.es/1980-home_default/parche-bordado-fender.jpg"
       }
     ]
   },
   {
     Name: "Decoratives",
-    Caption: "Give style and color to your living room!",
+    Caption: "Give style and color to your studio Musica!",
     contentPosition: "right",
     Items: [
       {
@@ -168,7 +168,6 @@ class BannerExample extends React.Component {
   render() {
     return (
       <div style={{ marginTop: "50px", color: "#494949" }}>
-        <h2>3 Items layout - StackOverflow - Yotam</h2>
 
         <Carousel
           className="Example"
