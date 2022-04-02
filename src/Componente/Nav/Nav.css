@@ -1,0 +1,41 @@
+.Users {
+  background-image: url(/public/Users.png);
+}
+.Cart {
+  background-image: url(/public/Cart.png);
+}
+.Search {
+  background-image: url(/public/Search.png);
+}
+.Cart,
+.Users,
+.Search {
+  height: 48px;
+  width: 48px;
+  margin: 5px;
+}
+.Marca {
+  background-image: url(/public/Logo.png);
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  margin-left: 50px;
+  margin-top:20px; 
+  position: absolute;
+}
+.NombreMarca {
+   box-sizing:border-box; 
+   padding: 0;
+   margin: 0;
+   padding-left: 16px;
+   margin-top: 90px;
+   color: #503BD9;
+}
+.Herramientas :hover {
+  margin-right: 20px;
+   transform: scale(1.15);
+}
+.Navbar {
+   height: 130px;
+}
+
