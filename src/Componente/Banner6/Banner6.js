@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Box, Grid } from "@mui/material";
 import "./Banner6.css";
+import Speakers from "../../Imagenes/Speakers.png";
 
 function Banner6() {
   return (
@@ -18,7 +19,7 @@ function Banner6() {
             Conviertete en el sentimiento de tu barrio con nuestros
             Instrumentros
           </Box>
-          <Box className="Speakers"></Box>
+          <img src={Speakers} alt= "parlantes" className="Speakers"/>
           <Box>
             <Button variant="contained" color="success" to="/history">
               Conozca mas sobre Sound On

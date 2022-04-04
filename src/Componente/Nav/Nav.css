@@ -1,12 +1,3 @@
-.Users {
-  background-image: url(/public/Users.png);
-}
-.Cart {
-  background-image: url(/public/Cart.png);
-}
-.Search {
-  background-image: url(/public/Search.png);
-}
 .Cart,
 .Users,
 .Search {
@@ -15,7 +6,6 @@
   margin: 5px;
 }
 .Marca {
-  background-image: url(/public/Logo.png);
   width: 72px;
   height: 72px;
   background-repeat: no-repeat;

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid, Button, styled } from "@mui/material";
 import "./imgytexto.css";
 import { purple } from "@mui/material/colors";
+import banda from "../../Imagenes/banda.jpg";
 
 function Imgytexto() {
   const ColorButton = styled(Button)(({ theme }) => ({
@@ -14,7 +15,7 @@ function Imgytexto() {
   return (
     <Grid container spacing={3} columns={16}>
       <Grid item xs={5}>
-        <Box className="Banda"></Box>
+        <img src={banda}  alt="banda tocando" className="Banda"/>
       </Grid>
       <Grid item xs={10}>
         <Box className="Info">

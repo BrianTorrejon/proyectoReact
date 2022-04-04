@@ -3,9 +3,10 @@ import { AppBar, Toolbar, Box, IconButton, useTheme, useMediaQuery } from "@mui/
 import "./Nav.css";
 import LogoyMarca from "./LogoyMarca.js";
 import IconosNav from "./IconosNav.js";
-import LinkButton from "./Buttoms.js";
+import Botones from "./Buttoms.js";
 import DrawerComponent from "./Iconbutton";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
 
 function Nav() {
   const [openDrawer, setOpenDrawer] = useState(true); //
@@ -28,12 +29,12 @@ function Nav() {
                 setOpenDrawer={setOpenDrawer}
               />
             ) : (
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-        <LinkButton Name="Home" />
-        <LinkButton Name="Categorias" />
-        <LinkButton Name="Nosotros" />
-        <LinkButton Name="Mi Cuenta" />
-        <LinkButton Name="Preguntas Frecuentes" />
+        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}> 
+        <Botones Name="Home" />
+        <Botones Name="Categorias" SubMenu={["Guitarras/Bajos","Baterias","Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares" ]}/>
+        <Botones Name="Nosotros" />
+        <Botones Name="Mi Cuenta" SubMenu={["Entrar","Abrir Cuenta Nueva"]}/>
+        <Botones Name="Preguntas Frecuentes" />
         </Box>
        )}
         {/* iconos */}

@@ -1,7 +1,8 @@
 import React from "react";
 import { Drawer } from "@mui/material";
 import { ListItem, List, ListItemIcon } from "@mui/material";
-import { ListItemText } from "@mui/material";
+import Botones from "./Buttoms.js";
+
 
 const DrawerComponent = ({ openDrawer, setOpenDrawer }) => {
   return (
@@ -9,27 +10,27 @@ const DrawerComponent = ({ openDrawer, setOpenDrawer }) => {
       <List>
         <ListItem divider button onClick={() => setOpenDrawer(false)}>
           <ListItemIcon>
-            <ListItemText>Home</ListItemText>
+          <Botones Name="Home" />
           </ListItemIcon>
         </ListItem>
         <ListItem divider button onClick={() => setOpenDrawer(false)}>
           <ListItemIcon>
-            <ListItemText>Categorias</ListItemText>
+          <Botones Name="Categorias" SubMenu={["Guitarras/Bajos","Baterias","Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares" ]}/>
           </ListItemIcon>
         </ListItem>
         <ListItem divider button onClick={() => setOpenDrawer(false)}>
           <ListItemIcon>
-            <ListItemText>Nosotros</ListItemText>
+          <Botones Name="Nosotros" />
           </ListItemIcon>
         </ListItem>
         <ListItem divider button onClick={() => setOpenDrawer(false)}>
           <ListItemIcon>
-            <ListItemText>Mi Cuenta</ListItemText>
+          <Botones Name="Mi Cuenta" SubMenu={["Entrar","Abrir Cuenta Nueva"]}/>
           </ListItemIcon>
         </ListItem>
         <ListItem divider button onClick={() => setOpenDrawer(false)}>
           <ListItemIcon>
-            <ListItemText>Preguntas Frecuentes</ListItemText>
+          <Botones Name="Preguntas Frecuentes" />
           </ListItemIcon>
         </ListItem>
       </List>
