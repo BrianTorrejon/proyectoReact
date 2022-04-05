@@ -17,36 +17,37 @@ function Nav() {
 
   console.log(matches);
   console.log(matches);
-  return (
-    <AppBar className="Navbar">
-      <Toolbar>
-        {/* Logo y Marca */}
-        <LogoyMarca />
-        {/* Drop Dows */}
-        {matches ? (
-              <DrawerComponent
-                openDrawer={openDrawer}
-                setOpenDrawer={setOpenDrawer}
-              />
-            ) : (
-        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}> 
-        <Botones Name="Home" />
-        <Botones Name="Categorias" SubMenu={["Guitarras/Bajos","Baterias","Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares" ]}/>
-        <Botones Name="Nosotros" />
-        <Botones Name="Mi Cuenta" SubMenu={["Entrar","Abrir Cuenta Nueva"]}/>
-        <Botones Name="Preguntas Frecuentes" />
-        </Box>
-       )}
-        {/* iconos */}
-        {matches ? (
-          <IconButton color="inherit" onClick={() => setOpenDrawer(true)}>
-            <MenuRoundedIcon />
-          </IconButton>
-        ) : (
-        <IconosNav />
-        )}
-      </Toolbar>
-    </AppBar>
+  return (<>
+      <AppBar className="Navbar" position="sticky">
+        <Toolbar>
+          {/* Logo y Marca */}
+          <LogoyMarca />
+          {/* Drop Dows */}
+          {matches ? (
+            <DrawerComponent
+              openDrawer={openDrawer}
+              setOpenDrawer={setOpenDrawer}
+            />
+          ) : (
+            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <Botones Name="Home" />
+              <Botones Name="Categorias" SubMenu={["Guitarras/Bajos", "Baterias", "Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares"]} />
+              <Botones Name="Nosotros" />
+              <Botones Name="Mi Cuenta" SubMenu={["Entrar", "Abrir Cuenta Nueva"]} />
+              <Botones Name="Preguntas Frecuentes" />
+            </Box>
+          )}
+          {/* iconos */}
+          {matches ? (
+            <IconButton color="inherit" onClick={() => setOpenDrawer(true)}>
+              <MenuRoundedIcon />
+            </IconButton>
+          ) : (
+            <IconosNav />
+          )}
+        </Toolbar>
+      </AppBar>
+  </>
   );
 }
 

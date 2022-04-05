@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Button, Typography } from '@material-ui/core'
 import Stack from '@mui/material/Stack';
 import { makeStyles } from "@material-ui/core/styles";
-import { padding } from "@mui/system";
 
 const useStyles = makeStyles({
     box: {
@@ -13,8 +12,7 @@ const useStyles = makeStyles({
         height: '63.38vh', //aprox 500px
         display: 'flex',
         alignItems: 'center',
-        color: '#ffffff',
-        marginTop: "130px"
+        color: '#ffffff' 
     },
     h3: {
         fontSize: '50px'

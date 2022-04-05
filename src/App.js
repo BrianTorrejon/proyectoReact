@@ -7,21 +7,22 @@ import Imgytexto from "./Componente/ImgyTexto/Imgytexto.js";
 import BannerExample from "./Componente/Carrousel/Carrousel.js";
 import { CssBaseline } from "@material-ui/core";
 import Banner from "./Componente/BannerPrincipal/Banner";
+import Alerta from "./Componente/Alerta/Alerta";
 
 
 
 function App() {
   return (
     <div className="DivP">
+      <CssBaseline />
+      <Alerta/>
       <Nav />
-      <CssBaseline/>
       <Banner />
       <Banner6 />
       <Imgytexto />
       <BannerExample />
       <Footer />
     </div>
-
   );
 }
 
