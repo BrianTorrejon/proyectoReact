@@ -5,18 +5,23 @@ import "./App.css"
 import Footer from "./Componente/Footer/Footer";
 import Imgytexto from "./Componente/ImgyTexto/Imgytexto.js";
 import BannerExample from "./Componente/Carrousel/Carrousel.js";
+import { CssBaseline } from "@material-ui/core";
+import Banner from "./Componente/BannerPrincipal/Banner";
+
 
 
 function App() {
   return (
     <div className="DivP">
-        <Nav/>
-        <Banner6/>
-        <Imgytexto/>
-        <BannerExample/>
-        <Footer/>
-    </div> 
-        
+      <Nav />
+      <CssBaseline/>
+      <Banner />
+      <Banner6 />
+      <Imgytexto />
+      <BannerExample />
+      <Footer />
+    </div>
+
   );
 }
 
