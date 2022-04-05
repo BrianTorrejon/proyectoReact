@@ -42,11 +42,7 @@ export const RedesSociales = () => {
 
   return (
     <>
-      <Box //style={{backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/003/536/679/non_2x/light-purple-background-with-music-symbols-vector.jpg)',
-        //  backgroundRepeat: 'no-repeat',
-        //  backgroundSize: 'cover',
-        //  backgroundPosition: 'center'}}
-        className={classes.box}>
+      <Box className={classes.box}>
         <Container>
           <Grid component="h1" align="center">Compartelo con un amigo</Grid>
           <Grid container align="center">
