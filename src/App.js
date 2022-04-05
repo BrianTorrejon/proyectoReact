@@ -1,5 +1,5 @@
 import { CssBaseline } from "@material-ui/core";
-import Rutas from "./components/Rutas";
+import Rutas from "./components/Ofertas/Rutas";
 
 
 function App() {

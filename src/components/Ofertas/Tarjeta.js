@@ -7,11 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid, makeStyles } from '@material-ui/core';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate } from "react-router-dom";
 
 const useStyle = makeStyles({
@@ -55,23 +50,9 @@ const Tarjeta = ({ offer }) => {
 
   let navigate = useNavigate();
 
-  const [abrir, setAbrir] = useState(false)
   const classes = useStyle();
   const [width, setwidth] = useState(0)
   const [height, setheight] = useState(0)
-
-  const handleAbrir = () => {
-    setAbrir(true)
-  }
-
-  const handleCerrar = () => {
-    setAbrir(false)
-  }
-
-  const handleAgregar = () => {
-    handleCerrar();
-    alert("El producto se agrego exitosamente");
-  }
 
   function getMeta(url) {
     var img = new Image();
@@ -123,28 +104,6 @@ const Tarjeta = ({ offer }) => {
               navigate("/Instrumento/" + offer.id)}>
               Quick Shop
             </Button>
-            <Dialog
-              open={abrir}
-              onClose={handleCerrar}
-              aria-labelledby="alert-dialog-title"
-              aria-describedby="alert-dialog-description"
-            >
-              <DialogTitle id="alert-dialog-title">
-                {"Quiere agregar el producto al carrito?"}
-              </DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                  {offer.nombre} <br />
-                  Precio: {offer.precio}
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={handleCerrar}>Cerrar</Button>
-                <Button onClick={handleAgregar} autoFocus> {/* AGREGAR EL PRODUCTO AL CARRITO*/}
-                  Agregar
-                </Button>
-              </DialogActions>
-            </Dialog>
           </Box>
         </Grid>
       </CardActions>

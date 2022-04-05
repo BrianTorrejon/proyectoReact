@@ -2,6 +2,11 @@ import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Button, Card, CardActions, CardContent, Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 const useStyle = makeStyles({
     gridContainer: {
@@ -24,6 +29,21 @@ const useStyle = makeStyles({
 })
 
 const Instrumento = () => {
+
+    const [abrir, setAbrir] = useState(false)
+
+    const handleAbrir = () => {
+        setAbrir(true)
+    }
+
+    const handleCerrar = () => {
+        setAbrir(false)
+    }
+
+    const handleAgregar = () => {
+        handleCerrar();
+        alert("El producto se agrego exitosamente");
+    }
 
     const classes = useStyle();
 
@@ -63,12 +83,34 @@ const Instrumento = () => {
                             <Typography variant='h5'> {instrumento.precio} <strike>{instrumento.precioAnterior}</strike>  </Typography>
                             <Typography> Stock  </Typography>
                             <CardActions>
-                                <Button className={classes.boton}>Comprar</Button>
+                                <Button className={classes.boton} onClick={handleAbrir}>Comprar</Button>
                             </CardActions>
                         </CardContent>
                     </Card>
                 </Grid>
             </Grid>
+            <Dialog
+                open={abrir}
+                onClose={handleCerrar}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Quiere agregar el producto al carrito?"}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        {instrumento.nombre} <br />
+                        Precio: {instrumento.precio}
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCerrar}>Cerrar</Button>
+                    <Button onClick={handleAgregar} autoFocus> {/* AGREGAR EL PRODUCTO AL CARRITO*/}
+                        Agregar
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Container>
     )
 }
