@@ -8,7 +8,7 @@ import BannerExample from "./Componente/Carrousel/Carrousel.js";
 import { CssBaseline } from "@material-ui/core";
 import Banner from "./Componente/BannerPrincipal/Banner";
 import Alerta from "./Componente/Alerta/Alerta";
-import Ventajas from "./components/Ventajas/Ventajas";
+import Ventajas from "./Componente/Ventajas/Ventajas";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Alerta/>
       <Nav />
       <Banner />
-       <Ventajas/>
+      <Ventajas/>
       <Banner6 />
       <Imgytexto />
       <BannerExample />
