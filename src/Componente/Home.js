@@ -6,6 +6,7 @@ import Footer from './Footer/Footer'
 import Imgytexto from './ImgyTexto/Imgytexto'
 import Mision from './Mision/Mision'
 import ContenedorOfertas from './Ofertas/ContenedorOfertas'
+import RedesSociales from './RedesSociales/RedesSociales'
 import Ventajas from './Ventajas/Ventajas'
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <Banner6 />
         <Imgytexto />
         <BannerExample />
+        <RedesSociales/>
         <Footer />
     </>)
 }
