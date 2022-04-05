@@ -1,5 +1,5 @@
 import { CssBaseline } from "@material-ui/core";
-import Banner from "./components/Banner";
+import Banner from "./components/BannerPrincipal/Banner";
 
 
 
