@@ -8,8 +8,8 @@ function App() {
     <div className="DivP">
       <CssBaseline />
       <Rutas />
-     
-    </div>)
+    </div>
+  );
 }
 
 export default App;
