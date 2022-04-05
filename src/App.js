@@ -1,5 +1,5 @@
 import { CssBaseline } from "@material-ui/core";
-import Ventajas from "./components/Ventajas";
+import Ventajas from "./components/Ventajas/Ventajas";
 
 function App() {
   return (
