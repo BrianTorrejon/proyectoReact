@@ -1,5 +1,5 @@
 import { CssBaseline } from "@material-ui/core";
-import Mision from "./components/Mision";
+import Mision from "./components/Mision/Mision";
 
 
 
