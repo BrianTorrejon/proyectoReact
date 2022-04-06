@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Container } from "@mui/material";
+import { Box, Grid, } from "@mui/material";
 import "./Footer.css";
 import "../Nav/Nav.css";
 import Logo from "../../Imagenes/Logo.png";
@@ -12,8 +12,8 @@ function Footer() {
     <footer className="PiePagina">
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
-        <Grid container spacing={3}>
-          <Grid item sm xs={12}>
+        <Grid container spacing={6}>
+          <Grid>
             <img src={Logo} alt="Logo" className="Marca" />
             <Box className="NombreMarca">
               <h1>Sound On</h1>
