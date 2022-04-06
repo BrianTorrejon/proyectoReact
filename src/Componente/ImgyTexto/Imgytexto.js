@@ -13,9 +13,9 @@ function Imgytexto() {
     },
   }));
   return (
-    <Grid container spacing={3} columns={16}>
+    <Grid container spacing={3} columns={16} >
       <Grid item xs={5}>
-        <img src={banda}  alt="banda tocando" className="Banda"/>
+        <img src={banda} alt="banda tocando" className="Banda" />
       </Grid>
       <Grid item xs={10}>
         <Box className="Info">

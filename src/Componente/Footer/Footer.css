@@ -1,5 +1,8 @@
 .PiePagina {
     background-image: url(../../Imagenes/Pie.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: #FF2E15;
     font-size: 20px;
     opacity: 80%;

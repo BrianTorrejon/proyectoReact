@@ -5,7 +5,6 @@ import Speakers from "../../Imagenes/Speakers.png";
 
 function Banner6() {
   return (
-    <div className="DivBanner">
       <Grid container className="Slogan">
         <Grid
           className="Banner6"
@@ -19,7 +18,7 @@ function Banner6() {
             Conviertete en el sentimiento de tu barrio con nuestros
             Instrumentros
           </Box>
-          <img src={Speakers} alt= "parlantes" className="Speakers"/>
+          <img src={Speakers} alt="parlantes" className="Speakers" />
           <Box>
             <Button variant="contained" color="success" to="/history">
               Conozca mas sobre Sound On
@@ -27,7 +26,7 @@ function Banner6() {
           </Box>
         </Grid>
       </Grid>
-    </div>
+
   );
 }
 
