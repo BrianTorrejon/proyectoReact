@@ -3,7 +3,7 @@
 .Search {
   height: 48px;
   width: 48px;
-  margin: 5px;
+ 
 }
 .Marca {
   width: 72px;
@@ -22,8 +22,7 @@
    color: #503BD9;
 }
 .Herramientas :hover {
-  margin-right: 20px;
-   transform: scale(1.15);
+   /*transform: scale(1.15);*/
 }
 .Navbar {
    height: 130px;
