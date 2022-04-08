@@ -5,6 +5,7 @@ import Home from "../Home"
 import Nav from '../Nav/Nav';
 import Alerta from '../Alerta/Alerta';
 import Carrito from '../Carrito/Carrito';
+import Footer from '../Footer/Footer';
 
 const Rutas = () => {
     return (
@@ -16,6 +17,7 @@ const Rutas = () => {
                 <Route path='/Instrumento/:id' element={<Instrumento />} />
                 <Route path='/Carrito' element={<Carrito />} />
             </Routes>
+            <Footer />
         </Router>
     )
 }

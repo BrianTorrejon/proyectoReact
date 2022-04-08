@@ -21,9 +21,9 @@
    margin-top: 90px;
    color: #503BD9;
 }
-.Herramientas :hover {
-   /*transform: scale(1.15);*/
-}
+/* .Herramientas :hover {
+   transform: scale(1.15);
+} */
 .Navbar {
    height: 130px;
 }
