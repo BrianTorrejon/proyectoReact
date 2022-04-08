@@ -46,7 +46,7 @@ const useStyle = makeStyles({
   }
 })
 
-const Tarjeta = ({ offer }) => {
+const Tarjeta = ({ offer, url }) => {
 
   let navigate = useNavigate();
 
@@ -101,7 +101,7 @@ const Tarjeta = ({ offer }) => {
         <Grid container justifyContent="center">
           <Box width="90%">
             <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() =>
-              navigate("/Instrumento/" + offer.id)}>
+              navigate("/Instrumento/" + offer.id + "/" + url)}>
               Quick Shop
             </Button>
           </Box>

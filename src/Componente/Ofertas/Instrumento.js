@@ -47,13 +47,13 @@ const Instrumento = () => {
 
     const classes = useStyle();
 
-    let { id } = useParams();
+    let { id, url } = useParams();
 
     const [instrumento, setInstrumento] = useState({});
 
     const cargarInstrumento = async () => {
 
-        const instrumentoUrl = "http://localhost:3000/ofertas/" + id;
+        const instrumentoUrl = "http://localhost:3000/" + url + "/" + id;
         const resInstrumento = await axios.get(instrumentoUrl);
         let instrument = await resInstrumento.data;
         setInstrumento(instrument);

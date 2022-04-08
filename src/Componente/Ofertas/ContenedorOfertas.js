@@ -38,7 +38,8 @@ export const ContenedorOfertas = () => {
             lista.map((oferta) =>
               <Grid item xs={12} md={6} lg={3} key={oferta.id}>
                 <Tarjeta
-                  offer={oferta} />
+                  offer={oferta}
+                  url="ofertas" />
               </Grid>
             )
           }

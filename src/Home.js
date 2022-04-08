@@ -1,14 +1,13 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import Banner6 from './Banner6/Banner6'
-import Banner from './BannerPrincipal/Banner'
-import BannerExample from './Carrousel/Carrousel'
-import Footer from './Footer/Footer'
-import Imgytexto from './ImgyTexto/Imgytexto'
-import Mision from './Mision/Mision'
-import ContenedorOfertas from './Ofertas/ContenedorOfertas'
-import RedesSociales from './RedesSociales/RedesSociales'
-import Ventajas from './Ventajas/Ventajas'
+import Banner6 from './Componente/Banner6/Banner6'
+import Banner from './Componente/BannerPrincipal/Banner'
+import BannerExample from './Componente/Carrousel/Carrousel'
+import Imgytexto from './Componente/ImgyTexto/Imgytexto'
+import Mision from './Componente/Mision/Mision'
+import ContenedorOfertas from './Componente/Ofertas/ContenedorOfertas'
+import RedesSociales from './Componente/RedesSociales/RedesSociales'
+import Ventajas from './Componente/Ventajas/Ventajas'
 
 const Home = () => {
     return (<>
