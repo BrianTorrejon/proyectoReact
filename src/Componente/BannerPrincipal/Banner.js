@@ -40,7 +40,7 @@ const Banner = () => {
         <Box className={classes.box}>
             <Stack ml={6.3} > {/* aprox 50px */}
                 <Typography variant='h3' className={classes.h3}>Apoya a la creatividad musical</Typography>
-                <Typography variant='h4' className={classes.h4}>Decubre nuevos instrumentos y sus historias</Typography>
+                <Typography variant='h4' className={classes.h4}>Descubre nuevos instrumentos y sus historias</Typography>
                 <Button size='medium' className={classes.boton}>Buscar instrumentos</Button>
             </Stack>
         </Box >

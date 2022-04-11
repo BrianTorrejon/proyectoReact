@@ -55,7 +55,7 @@ const Mision = () => {
                     <Typography variant='h4' className={classes.titulo}><span className={classes.span}>¿Quieres formar parte</span> del mundo de la musica?</Typography>
                     <Typography component='div' >
                         <Box sx={{ fontWeight: 'bold' }}>
-                            Nuesta mision es conenctar a las personas con el mundo de la musica a traves de los diversos intrumentos musicales.
+                            Nuesta mision es conectar a las personas con el mundo de la musica a traves de los diversos intrumentos musicales.
                             ¿Por que?
                         </Box>
                     </Typography>
