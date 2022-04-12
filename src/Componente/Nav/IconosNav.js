@@ -1,15 +1,14 @@
-import React from "react";
+import { React, useState } from "react";
 import { Grid } from "@mui/material";
 import "./Nav.css";
 import Search from "../../Imagenes/Search.png";
 import Cart from "../../Imagenes/Cart.png";
 import Users from "../../Imagenes/Users.png";
 import { IconButton } from "@material-ui/core";
-import { useNavigate } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-import { useState } from "react";
+import Modal from "../CarritoModal/Modal";
 
 const SearchBig = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -38,9 +37,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function IconosNav() {
 
+    const [abrirCarrito, setAbrirCarrito] = useState(false)
+
     const [cambiarBuscador, setCambiarBuscador] = useState(false)
 
-    let navigate = useNavigate();
     return (
         <Grid container className="Herramientas" direction="row" justifyContent="flex-end">
             {cambiarBuscador ?
@@ -63,11 +63,15 @@ function IconosNav() {
                 <img src={Users} alt="Contacto" className="Users" />
             </IconButton >
 
-            <IconButton onClick={() => navigate("/Carrito")} >
+            <IconButton onClick={() => setAbrirCarrito(!abrirCarrito)} >
                 <img src={Cart} alt="Carrito" className="Cart" />
             </IconButton>
+            {abrirCarrito &&
+                <Modal
+                    estado={abrirCarrito}
+                    cambiarEstado={setAbrirCarrito} />
+            }
         </Grid >
-
     );
 }
 

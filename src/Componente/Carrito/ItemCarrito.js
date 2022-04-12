@@ -2,7 +2,7 @@ import { Button, Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
 
 const useStyle = makeStyles({
-    item : {
+    item: {
         marginTop: "20px"
     }
 })
