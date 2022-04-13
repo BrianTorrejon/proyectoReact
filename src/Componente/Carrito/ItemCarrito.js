@@ -1,28 +1,63 @@
 import { Button, Grid, makeStyles } from '@material-ui/core'
+import { Card, Typography } from '@mui/material';
 import React from 'react'
 
 const useStyle = makeStyles({
     item: {
-        marginTop: "20px"
+        marginTop: "30px",
+        color: "black"
+    },
+    precio: {
+        fontWeight: 600,
+        color: '#503BD9',
+        fontSize: '24px'
+    },
+    boton: {
+        fontSize: '12px',
+        background: '#503BD9',
+        color: 'white',
+        marginTop: "5px",
+        marginRight: "5px",
+        textTransform: "none",
+        '&:hover': {
+            backgroundColor: '#4230B3',
+            color: 'white'
+        }
     }
 })
 
-const ItemCarrito = () => {
+const ItemCarrito = ({ item }) => {
+
+    console.log("ebtro a item carrito")
 
     const classes = useStyle();
 
     return (
         <>
             <Grid container className={classes.item}>
-                <Grid item sm={6} xs={12}>
-                    Imagen
-                    Marca
-                    Nombre <br />
-
+                <Grid item sm={4} xs={12}>
+                    <Grid item style={{
+                        width: "150px",
+                        height: "150px",
+                        backgroundImage: "url(" + item.urlImg + ")",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center',
+                        border: "1px solid #503BD9"
+                    }} />
                 </Grid>
-                <Grid item sm={6} xs={12}>Precio: $10000 * 2 = 20000</Grid>
-                <Button>Eliminar uno</Button>
-                <Button>Eliminar todos</Button>
+                <Grid item sm={4} xs={12}>
+                    <Typography variant='h5'>{item.marca}</Typography>
+                    <Typography variant='h6'>{item.nombre}</Typography>
+                </Grid>
+                <Grid item sm={4} xs={12}>
+                    <Typography >${item.precio},00 x 10 =
+                        <span className={classes.precio}> ${item.precio * 10},00</span>
+                    </Typography>
+                </Grid>
+                <Button className={classes.boton} >Eliminar uno</Button>
+                <Button className={classes.boton} >Eliminar todos</Button>
+
             </Grid>
             <hr />
         </>

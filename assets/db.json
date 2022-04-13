@@ -90,5 +90,35 @@
             "urlImg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Masterkeyboard.jpg",
             "marca": "Casio"
         }
+    ],
+    "cart": [
+        {
+            "id": 5,
+            "nombre": "Guitarra",
+            "precio": 4000,
+            "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
+            "marca": "Gracia"
+        },
+        {
+            "id": 6,
+            "nombre": "Bateria",
+            "precio": 20000,
+            "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+            "marca": "Pearl"
+        },
+        {
+            "id": 11,
+            "nombre": "Bajo",
+            "precio": 12000,
+            "urlImg": "https://images.unsplash.com/photo-1622584968804-58fc2a78cfc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1478&q=80",
+            "marca": "Ibanez"
+        },
+        {
+            "id": 12,
+            "nombre": "Teclado",
+            "precio": 11000,
+            "urlImg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Masterkeyboard.jpg",
+            "marca": "Casio"
+        }
     ]
 }

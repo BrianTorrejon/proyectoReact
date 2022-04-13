@@ -39,6 +39,7 @@ const useStyle = makeStyles({
     fontSize: '18px',
     background: '#503BD9',
     color: 'white',
+    textTransform: "none",
     '&:hover': {
       backgroundColor: '#4230B3',
       color: 'white'
