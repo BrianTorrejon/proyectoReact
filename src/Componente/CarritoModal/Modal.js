@@ -63,17 +63,18 @@ const Modal = ({ estado, cambiarEstado }) => {
                 <DialogContentText id="alert-dialog-description">
                     {
                         lista.length ?
-                            (
-                                lista.map(cartItem =>
+                            <>
+                                {lista.map(cartItem =>
                                     < ItemCarrito item={cartItem} >
                                         {total = total + cartItem.precio}
                                     </ItemCarrito>
-                                )
-                            )
+                                )}
+                                <Typography className={classes.total}> TOTAL: ${total}</Typography>
+                            </>
                             :
                             (<Typography>SU CARRITO SE ENCUENTRA VACIO</Typography>)
                     }
-                    <Typography className={classes.total}> TOTAL: ${total}</Typography>
+
 
                 </DialogContentText>
             </DialogContent>
