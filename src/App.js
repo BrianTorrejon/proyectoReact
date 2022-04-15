@@ -1,13 +1,22 @@
 import React from "react";
-import "./App.css";
-import { CssBaseline } from "@material-ui/core";
-import Rutas from "./Componente/Router/Rutas";
+import Nav from "./Componente/Nav/Nav.js";
+import Banner6 from "./Componente/Banner6/Banner6.js";
+import "./App.css"
+import Footer from "./Componente/Footer/Footer";
+import Imgytexto from "./Componente/ImgyTexto/Imgytexto.js";
+import BannerExample from "./Componente/Carrousel/Carrousel.js";
+
+
 function App() {
   return (
     <div className="DivP">
-      <CssBaseline />
-      <Rutas />
-    </div>    
+        <Nav/>
+        <Banner6/>
+        <Imgytexto/>
+        <BannerExample/>
+        <Footer/>
+    </div> 
+        
   );
 }
 
