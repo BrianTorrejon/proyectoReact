@@ -28,10 +28,10 @@ function Nav() {
             />
           ) : (
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <Botones Name="Home" />
-              <Botones Name="Categorias" SubMenu={["Guitarras/Bajos", "Baterias", "Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares"]} />
+              <Botones Name="Home" SubMenu={["Home"]} url="/"/>
+              <Botones Name="Productos" SubMenu={["Guitarras/Bajos", "Baterias", "Piano/Teclado", "Violines", "Parlantes", "Microfonos", "Auriculares"] } url="/PaginaInstrumentos"/>
               <Botones Name="Nosotros" />
-              <Botones Name="Mi Cuenta" SubMenu={["Entrar", "Abrir Cuenta Nueva"]} />
+              <Botones Name="Mi Cuenta" SubMenu={["Entrar", "Abrir Cuenta Nueva"]} url="/"/>
               <Botones Name="Preguntas Frecuentes" />
             </Box>
           )}
