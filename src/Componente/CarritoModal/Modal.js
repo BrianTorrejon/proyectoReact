@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useEffect, useContext } from 'react'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -8,7 +8,7 @@ import { Button, makeStyles, Typography } from '@material-ui/core';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import ItemCarrito from '../Carrito/ItemCarrito';
-import axios from 'axios';
+import { CarritoContext } from '../Carrito/context/CarritoProvider';
 
 const useStyle = makeStyles({
     botonCerrar: {
@@ -23,6 +23,8 @@ const useStyle = makeStyles({
 })
 const Modal = ({ estado, cambiarEstado }) => {
 
+    const { cart, actualizarStado, limpiarCarrito, eliminarProducto } = useContext(CarritoContext)
+
     let total = 0;
 
     const classes = useStyle();
@@ -31,20 +33,11 @@ const Modal = ({ estado, cambiarEstado }) => {
         cambiarEstado(!estado)
     }
 
-    const [lista, setLista] = useState([]);
-
-    const cargarCarrito = async () => {
-
-        const carritoUrl = "http://localhost:3000/cart";
-        const resCarrito = await axios.get(carritoUrl);
-        let itemsCarrito = await resCarrito.data;
-        setLista(itemsCarrito);
-    };
-
     useEffect(() => {
-        cargarCarrito()
+        actualizarStado()
     }
         , [])
+
 
     return (
         <Dialog
@@ -62,10 +55,10 @@ const Modal = ({ estado, cambiarEstado }) => {
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
                     {
-                        lista.length ?
+                        cart.length ?
                             <>
-                                {lista.map(cartItem =>
-                                    < ItemCarrito item={cartItem} >
+                                {cart.map(cartItem =>
+                                    < ItemCarrito item={cartItem} eliminarProducto={eliminarProducto} >
                                         {total = total + cartItem.precio}
                                     </ItemCarrito>
                                 )}
@@ -79,7 +72,7 @@ const Modal = ({ estado, cambiarEstado }) => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions >
-                <Button onClick={handleCerrar} >Limpiar Carrito</Button>
+                <Button onClick={() => limpiarCarrito()} >Limpiar Carrito</Button>
                 <Button onClick={handleCerrar} >Cerrar</Button>
                 <Button onClick={handleCerrar} >Comprar</Button>
             </DialogActions>

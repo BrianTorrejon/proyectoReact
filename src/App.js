@@ -1,13 +1,19 @@
 import React from "react";
-import "./App.css";
+import "./App.css"
+import Rutas from "./Componente/Router/Rutas"
 import { CssBaseline } from "@material-ui/core";
-import Rutas from "./Componente/Router/Rutas";
+import CarritoProvider from "./Componente/Carrito/context/CarritoProvider";
+
+
 function App() {
   return (
     <div className="DivP">
-      <CssBaseline />
-      <Rutas />
-    </div>    
+      <CarritoProvider>
+        <CssBaseline />
+        <Rutas />
+      </CarritoProvider>
+    </div>
+
   );
 }
 

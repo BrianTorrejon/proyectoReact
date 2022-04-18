@@ -1,5 +1,5 @@
 import { Button, Grid, makeStyles } from '@material-ui/core'
-import { Card, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import React from 'react'
 
 const useStyle = makeStyles({
@@ -26,9 +26,7 @@ const useStyle = makeStyles({
     }
 })
 
-const ItemCarrito = ({ item }) => {
-
-    console.log("ebtro a item carrito")
+const ItemCarrito = ({ item, eliminarProducto }) => {
 
     const classes = useStyle();
 
@@ -51,12 +49,12 @@ const ItemCarrito = ({ item }) => {
                     <Typography variant='h6'>{item.nombre}</Typography>
                 </Grid>
                 <Grid item sm={4} xs={12}>
-                    <Typography >${item.precio},00 x 10 =
-                        <span className={classes.precio}> ${item.precio * 10},00</span>
+                    <Typography >${item.precio},00 x {item.quantity} =
+                        <span className={classes.precio}> ${item.precio * item.quantity},00</span>
                     </Typography>
                 </Grid>
-                <Button className={classes.boton} >Eliminar uno</Button>
-                <Button className={classes.boton} >Eliminar todos</Button>
+                <Button className={classes.boton} onClick={() => eliminarProducto(item)} >Eliminar uno</Button>
+                <Button className={classes.boton} onClick={() => eliminarProducto(item, true)}>Eliminar todos</Button>
 
             </Grid>
             <hr />

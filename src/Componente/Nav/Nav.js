@@ -12,8 +12,8 @@ function Nav() {
   const [openDrawer, setOpenDrawer] = useState(true); //
 
   //Theme instance
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const theme = useTheme(); 
+  const matches = useMediaQuery(theme.breakpoints.down("sm")); 
 
   return (<>
       <AppBar className="Navbar" position="sticky">

@@ -7,7 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid, makeStyles } from '@material-ui/core';
-import { useNavigate } from "react-router-dom";
 
 const useStyle = makeStyles({
   root: {
@@ -47,9 +46,7 @@ const useStyle = makeStyles({
   }
 })
 
-const Tarjeta = ({ offer, url }) => {
-
-  let navigate = useNavigate();
+const Tarjeta = ({ offer, agregarAlCarrito }) => {
 
   const classes = useStyle();
   const [width, setwidth] = useState(0)
@@ -101,8 +98,7 @@ const Tarjeta = ({ offer, url }) => {
       <CardActions>
         <Grid container justifyContent="center">
           <Box width="90%">
-            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() =>
-              navigate("/Instrumento/" + offer.id + "/" + url)}>
+            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() => agregarAlCarrito(offer)}>
               Quick Shop
             </Button>
           </Box>
