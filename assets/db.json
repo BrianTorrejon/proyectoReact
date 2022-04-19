@@ -38,72 +38,62 @@
     },
     {
       "id": 5,
-      "nombre": "Guitarra",
-      "precio": 4000,
-      "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
-      "marca": "Gracia"
+      "nombre": "Amplificador MG15GFX para guitarra de 15W",
+      "precio": 45000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_615266-MLA44295972464_122020-F.webp",
+      "marca": "Marshall"
     },
     {
       "id": 6,
-      "nombre": "Bateria",
-      "precio": 20000,
-      "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "marca": "Pearl"
+      "nombre": "Guitarra Clasica Criolla ", 
+      "precio": 10000,
+      "urlImg": "https://images.unsplash.com/photo-1581286651277-069e75ff5ccd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80",
+      "marca": "fender"
     },
     {
       "id": 7,
-      "nombre": "Bajo",
-      "precio": 12000,
-      "urlImg": "https://images.unsplash.com/photo-1622584968804-58fc2a78cfc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1478&q=80",
-      "marca": "Ibanez"
+      "nombre": "Microfono Dinamico Multifuncion",
+      "precio": 7000,
+      "urlImg": "https://images.unsplash.com/photo-1607033379710-044f964ccfde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "marca": "Shure"
     },
     {
       "id": 8,
-      "nombre": "Teclado",
-      "precio": 11000,
-      "urlImg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Masterkeyboard.jpg",
-      "marca": "Casio"
+      "nombre": "Teclado musical",
+      "precio": 95000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_738005-MLA46441750629_062021-F.webp",
+      "marca": "Roland"
     },
     {
       "id": 9,
-      "nombre": "Guitarra",
-      "precio": 4000,
-      "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
-      "marca": "Gracia"
+      "nombre": "Amplificador Code 25 para guitarra de 25W",
+      "precio": 55000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_893885-MLA32643464584_102019-F.webp",
+      "marca": "Marshall"
     },
     {
       "id": 10,
-      "nombre": "Bateria",
-      "precio": 20000,
-      "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "marca": "Pearl"
-    },
-    {
-      "id": 11,
-      "nombre": "Bajo",
-      "precio": 12000,
-      "urlImg": "https://images.unsplash.com/photo-1622584968804-58fc2a78cfc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1478&q=80",
+      "nombre": "Guitarra Electrica",
+      "precio": 60000,
+      "urlImg": "https://media.istockphoto.com/photos/red-electric-guitar-isolated-on-white-picture-id1026502148",
       "marca": "Ibanez"
     },
     {
+      "id": 11,
+      "nombre": "Bateria Spirit Of Maiden 5 ",
+      "precio": 220000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_775615-MLA40365037550_012020-F.webp",
+      "marca": "Premier"
+    },
+    {
       "id": 12,
-      "nombre": "Teclado",
-      "precio": 11000,
-      "urlImg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Masterkeyboard.jpg",
-      "marca": "Casio"
+      "nombre": "Controlador Dj + Interface",
+      "precio": 60000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_882855-MLA47953749954_102021-F.webp",
+      "marca": "Moon Midi"
     }
   ],
   "cart": [
-    {
-      "id": 2,
-      "nombre": "Bateria",
-      "precio": 20000,
-      "precioAnterior": "$21.500,00",
-      "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "marca": "Pearl",
-      "oferta": true,
-      "quantity": 2
-    },
     {
       "id": 1,
       "nombre": "Guitarra",
@@ -111,6 +101,16 @@
       "precioAnterior": "$5.000,00",
       "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
       "marca": "Gracia",
+      "oferta": true,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "nombre": "Bateria",
+      "precio": 20000,
+      "precioAnterior": "$21.500,00",
+      "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "marca": "Pearl",
       "oferta": true,
       "quantity": 2
     }

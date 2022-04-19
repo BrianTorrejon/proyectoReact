@@ -27,7 +27,7 @@ export const ContenedorOfertas = () => {
   return (
     <>
       <Container>
-        <Grid component="h1" align="center">Ultimas <span className={classes.span}>ofertas</span></Grid>
+        <Grid component="h1" align="center">Ultimas <span className={classes.span}>Ofertas</span></Grid>
         <Grid container spacing={3} align="center">
           {
             products.map((oferta) =>

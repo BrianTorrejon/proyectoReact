@@ -26,24 +26,24 @@ const Ventajas = () => {
     return (
         <>
             <Box style={{marginTop:"80px"}}>
-                <Grid component="h1" align="center"> ¿Por qué elejir <span className={classes.span}>Sound On?</span></Grid>
+                <Grid component="h1" align="center"> ¿Por qué elegir <span className={classes.span}>Sound On?</span></Grid>
                 <Grid className={classes.contenedor} container spacing={4}>
                     <TarjetaVentaja
                         icon={<PianoIcon />}
                         titulo='Variedad'
-                        texto='Gran variedad de intrumentos musicales de todas partes del mundo, dede lo mas convencional hasta lo mas insolito.' />
+                        texto='Gran variedad de intrumentos musicales de todas partes del mundo, desde lo mas convencional hasta lo más insólito.' />
                     <TarjetaVentaja
                         icon={<MusicNoteIcon />}
-                        titulo='¿Cómo suena?'
-                        texto='Podras hacer prueba de sonido de cualquier instrumento sin compromiso o podras solicitar un video en caso de ser de otra ciudad.' />
+                        titulo='¿Cómo suenan?'
+                        texto='Podrás hacer prueba de sonido de cualquier instrumento sin compromiso o podrás solicitar un video en caso de ser de otra ciudad.' />
                     <TarjetaVentaja
                         icon={<LocalShippingOutlinedIcon />}
-                        titulo='Envios gratis'
-                        texto='Con cualquier compra que realices, el envio es gratis a cualquier punto del pais. Y si el monto supera los $15.000 se agregan regalos.' />
+                        titulo='Enviós gratis'
+                        texto='Con compras superiores a $10.000, el envió es gratis a cualquier punto del pais. Y si el monto supera los $15.000 se agregan regalos.' />
                     <TarjetaVentaja
                         icon={<LocalOfferOutlinedIcon />}
                         titulo='Descuentos exclusivos'
-                        texto='Tendras descuentos exclusivos en tu segunda compra que realices.' />
+                        texto='Tendrás descuentos exclusivos en tu segunda compra que realices.' />
                     <TarjetaVentaja
                         icon={<WorkspacePremiumOutlinedIcon />}
                         titulo='Calidad'

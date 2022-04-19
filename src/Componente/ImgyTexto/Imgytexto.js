@@ -28,7 +28,7 @@ function Imgytexto() {
           </Box>
           <h2>El Palosanto </h2>
           <Box className="Texto">
-            Es una madera más desconocida. Esta madera se caracteriza por ser
+            Es una madera más desconocida en el sector. Esta madera se caracteriza por ser
             muy densa, aceitosa y olorosa. También es resistente a la humedad y
             al ataque de insectos y hongos. Los instrumentos musicales
             fabricados con este material tienen fama de ser excelentes en sonido
