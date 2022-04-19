@@ -25,6 +25,7 @@ const Modal = ({ estado, cambiarEstado }) => {
 
     const { cart, actualizarStado, limpiarCarrito, eliminarProducto } = useContext(CarritoContext)
 
+    let subtotal = 0;
     let total = 0;
 
     const classes = useStyle();
@@ -37,7 +38,6 @@ const Modal = ({ estado, cambiarEstado }) => {
         actualizarStado()
     }
         , [])
-
 
     return (
         <Dialog
@@ -59,7 +59,8 @@ const Modal = ({ estado, cambiarEstado }) => {
                             <>
                                 {cart.map(cartItem =>
                                     < ItemCarrito item={cartItem} eliminarProducto={eliminarProducto} >
-                                        {total = total + cartItem.precio}
+                                        {subtotal = cartItem.precio * cartItem.quantity}
+                                        {total = total + subtotal}
                                     </ItemCarrito>
                                 )}
                                 <Typography className={classes.total}> TOTAL: ${total}</Typography>
