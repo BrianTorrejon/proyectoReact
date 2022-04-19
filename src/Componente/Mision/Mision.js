@@ -52,11 +52,11 @@ const Mision = () => {
         <Box>
             <Grid container className={classes.contenedor} spacing={8}>
                 <Grid item xs={12} sm={6} className={classes.grid}>
-                    <Typography variant='h4' className={classes.titulo}><span className={classes.span}>¿Quieres formar parte</span> del mundo de la musica?</Typography>
+                    <Typography variant='h4' className={classes.titulo}><span className={classes.span}>¿Quieres formar parte</span> del mundo de la música?</Typography>
                     <Typography component='div' >
                         <Box sx={{ fontWeight: 'bold' }}>
-                            Nuesta mision es conenctar a las personas con el mundo de la musica a traves de los diversos intrumentos musicales.
-                            ¿Por que?
+                            Nuesta misión es conectar a las personas con el mundo de la música a través de los diversos intrumentos que ofrecemos.
+                            ¿Por qué?
                         </Box>
                     </Typography>
                     <List>
@@ -76,7 +76,7 @@ const Mision = () => {
                             <ListItemIcon>
                                 <CheckCircleIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Fomenta la facilidad de adaptacion a cambios constantes." />
+                            <ListItemText primary="Fomenta la facilidad de adaptación a cambios constantes." />
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
@@ -88,11 +88,11 @@ const Mision = () => {
                             <ListItemIcon>
                                 <CheckCircleIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Mayor disciplina y paciencia." />
+                            <ListItemText primary=" Desarrolla mayor disciplina y paciencia." />
                         </ListItem>
                     </List>
 
-                    <Button className={classes.boton}>Descubre nuestos intrumentos</Button>
+                    <Button className={classes.boton} onClick="/PaginaInstrumentos" >Descubre nuestros intrumentos</Button>
                 </Grid>
                 <Grid item className={classes.imagen} xs={12} sm={6} />
 

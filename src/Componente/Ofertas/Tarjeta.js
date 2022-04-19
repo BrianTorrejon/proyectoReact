@@ -99,7 +99,7 @@ const Tarjeta = ({ offer, agregarAlCarrito }) => {
         <Grid container justifyContent="center">
           <Box width="90%">
             <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() => agregarAlCarrito(offer)}>
-              Quick Shop
+              Agregar al Carrito
             </Button>
           </Box>
         </Grid>

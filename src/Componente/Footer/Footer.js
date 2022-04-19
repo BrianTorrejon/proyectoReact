@@ -23,9 +23,9 @@ function Footer() {
             <Box>
               <h3>Guitarras</h3>
               <ul>
-                <li>Electricas</li>
+                <li>Eléctricas</li>
                 <li>Criollas</li>
-                <li>Acusticas</li>
+                <li>Acústicas</li>
                 <li>Bajos</li>
               </ul>
             </Box>
@@ -34,8 +34,8 @@ function Footer() {
             <Box>
               <h3>Baterias</h3>
               <ul>
-                <li>Acusticas</li>
-                <li>Electronicas</li>
+                <li>Acústicas</li>
+                <li>Eléctronicas</li>
                 <li>Platillos</li>
                 <li>Redoblantes</li>
                 <li>Pedales</li>
@@ -57,8 +57,8 @@ function Footer() {
             <Box>
               <h3>Piano/Teclado</h3>
               <ul>
-                <li>Teclado Electrico</li>
-                <li>Organo</li>
+                <li>Teclado Eléctrico</li>
+                <li>Órgano</li>
                 <li>Pianos Digitales</li>
                 <li>Sintetizadores</li>
                 <li>Controladores Midi</li>
@@ -70,7 +70,7 @@ function Footer() {
               <h3>Parlantes</h3>
               <ul>
                 <li>De Pie</li>
-                <li>De Estanterias</li>
+                <li>De Estanterías</li>
                 <li>Surround</li>
                 <li>Subwoofers</li>
                 <li>Autoamplificaadores</li>
