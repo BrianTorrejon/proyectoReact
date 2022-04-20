@@ -3,13 +3,36 @@ import { Box, Grid, Container } from "@mui/material";
 import "./Footer.css";
 import "../Nav/Nav.css";
 import Logo from "../../Imagenes/Logo.png";
+import { makeStyles } from '@material-ui/core';
 
-
-
+const useStyle = makeStyles({
+PiePagina: {
+  backgroundImage: 'url(../../Imagenes/Pie.png)',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  color: '#FF2E15',
+  fontSize: '20px',
+  opacity: '80%'
+  
+},
+h3: {
+  boxSizing:'border-box ',
+  padding: '0',
+  margin: '0',
+  fontSize: '20px'
+},
+li: {
+  fontSize: '15px'
+}
+})
 
 function Footer() {
+
+  const classes = useStyle();
+
   return (
-    <footer className="PiePagina">
+    <footer className={classes.PiePagina}>
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
         <Grid container spacing={3}>
