@@ -1,13 +1,31 @@
 import React from "react";
 import { Button, Box, Grid } from "@mui/material";
-import "./Banner6.css";
 import Speakers from "../../Imagenes/Speakers.png";
+import { makeStyles } from '@material-ui/core';
 
+
+const useStyle = makeStyles({
+  speakers: {
+   width: '96px',
+   height:'96px'
+   
+  },
+  banner6: {
+    background:'#EBA907'
+  },
+  slogan: {
+    height: '200px',
+    width: '1512px'
+  }
+})
 function Banner6() {
+
+  const classes = useStyle();
+
   return (
-      <Grid container className="Slogan">
+      <Grid container className= {classes.slogan}>
         <Grid
-          className="Banner6"
+          className= {classes.banner6}
           container
           direction="column"
           justifyContent="center"
@@ -18,7 +36,7 @@ function Banner6() {
             Conviertete en el sentimiento de tu barrio con nuestros
             Instrumentros
           </Box>
-          <img src={Speakers} alt="parlantes" className="Speakers" />
+          <img src={Speakers} alt="parlantes" className={classes.speakers} />
           <Box>
             <Button variant="contained" color="success" to="/history">
               Conozca mas sobre Sound On
