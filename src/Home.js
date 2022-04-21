@@ -18,7 +18,7 @@ const Home = () => {
         <Box style={{ marginTop: "80px" }}><Banner6 /></Box>
         <Box style={{ marginTop: "75px" }}><Imgytexto /></Box>
         <Box style={{ marginTop: "80px" }}><BannerExample /></Box>
-        <Box style={{ marginTop: "80px" }}><RedesSociales /></Box>
+        <Box style={{ marginTop: "70px" }}><RedesSociales /></Box>
     </>)
 }
 

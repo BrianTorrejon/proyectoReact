@@ -84,7 +84,7 @@ const Tarjeta = ({ offer, agregarAlCarrito }) => {
           <Grid container alignItems="center" spacing={1} justifyContent="center">
             <Grid item>
               <Typography variant="body1" component="p" className={classes.precio}>
-                {offer.precio}
+                ${offer.precio},00
               </Typography>
             </Grid>
             <Grid item>

@@ -17,12 +17,14 @@ const useStyles = makeStyles({
     },
     "& .MuiAlert-message": { //Hace referencia al mensaje del alert
       width: '100%',
-      textAlign: 'center'
+      textAlign: 'center',
+      color: '#001217'
     }
   },
   caja: {
     width: '100%',
-    fontSize: '14px'
+    fontSize: '14px',
+    color: '#E66EB2'
   }
 });
 

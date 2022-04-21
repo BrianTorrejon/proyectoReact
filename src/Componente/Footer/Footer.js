@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid } from "@mui/material";
 import Logo from "../../Imagenes/Logo.png";
 import { makeStyles } from '@material-ui/core';
+import Pie from "../../Imagenes/Pie.png";
 
 const useStyle = makeStyles({
 PiePagina: {
@@ -12,6 +13,7 @@ PiePagina: {
   color: '#FF2E15',
   fontSize: '20px',
   opacity: '80%'
+
   
 },
 h3: {
@@ -46,7 +48,7 @@ function Footer() {
   const classes = useStyle();
 
   return (
-    <footer className={classes.PiePagina}>
+    <footer className={classes.PiePagina} src={Pie} alt= "Pie de Pagina">
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
         <Grid container spacing={3}>
@@ -58,7 +60,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Guitarras</h3>
+              <h3 url="/PaginaInstrumentos">Guitarras</h3>
               <ul>
                 <li>Eléctricas</li>
                 <li>Criollas</li>
@@ -69,7 +71,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Baterias</h3>
+              <h3 url="/PaginaInstrumentos">Baterias</h3>
               <ul>
                 <li>Acústicas</li>
                 <li>Eléctronicas</li>
@@ -82,7 +84,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Violines</h3>
+              <h3 url="/PaginaInstrumentos" >Violines</h3>
               <ul>
                 <li>Violín Barroco</li>
                 <li>Violín Acústico</li>
@@ -92,7 +94,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Piano/Teclado</h3>
+              <h3 url="/PaginaInstrumentos">Piano/Teclado</h3>
               <ul>
                 <li>Teclado Eléctrico</li>
                 <li>Órgano</li>
@@ -104,7 +106,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Parlantes</h3>
+              <h3 url="/PaginaInstrumentos"> Parlantes</h3>
               <ul>
                 <li>De Pie</li>
                 <li>De Estanterías</li>
@@ -116,7 +118,7 @@ function Footer() {
           </Grid>
           <Grid item sm xs={6}>
             <Box>
-              <h3>Microfonos/Auriculares</h3>
+              <h3 url="/PaginaInstrumentos">Microfonos/Auriculares</h3>
               <ul>
                 <li>Microfonos Dinámicos</li>
                 <li>Auriculares Inlambricos</li>

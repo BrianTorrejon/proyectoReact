@@ -47,14 +47,23 @@ Search: {
 }
 })
 
-function IconosNav() {
+const productsAdded = () => {
+    this.setState({
+      productsAdded: true
+    })
+  }
+
+  
+
+const IconosNav = ({ offer }) => {
 
     const classes = useStyle();
 
     const [abrirCarrito, setAbrirCarrito] = useState(false)
 
     const [cambiarBuscador, setCambiarBuscador] = useState(false)
-
+    
+ 
     return (
         <Grid container direction="row" justifyContent="flex-end">
             {cambiarBuscador ?
@@ -79,6 +88,7 @@ function IconosNav() {
 
             <IconButton onClick={() => setAbrirCarrito(!abrirCarrito)} >
                 <img src={Cart} alt="Carrito" className={classes.Cart} />
+                productsAdded={this.state.agregarAlCarrito(offer)}
             </IconButton>
             {abrirCarrito &&
                 <Modal
