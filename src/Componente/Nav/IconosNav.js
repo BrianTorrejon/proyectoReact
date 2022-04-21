@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Grid } from "@mui/material";
-import "./Nav.css";
 import Search from "../../Imagenes/Search.png";
 import Cart from "../../Imagenes/Cart.png";
 import Users from "../../Imagenes/Users.png";
@@ -9,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import Modal from "../CarritoModal/Modal";
+import { makeStyles } from '@material-ui/core';
 
 const SearchBig = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -35,14 +35,28 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+const useStyle = makeStyles({
+Cart,
+Users,
+Search: {
+  height: '48px',
+  width: '48px',
+ '&:hover': {
+    transform: 'scale(1.15)'
+ } 
+}
+})
+
 function IconosNav() {
+
+    const classes = useStyle();
 
     const [abrirCarrito, setAbrirCarrito] = useState(false)
 
     const [cambiarBuscador, setCambiarBuscador] = useState(false)
 
     return (
-        <Grid container className="Herramientas" direction="row" justifyContent="flex-end">
+        <Grid container direction="row" justifyContent="flex-end">
             {cambiarBuscador ?
                 <SearchBig onBlur={() => setCambiarBuscador(false)}>
                     <SearchIconWrapper>
@@ -55,16 +69,16 @@ function IconosNav() {
                 </SearchBig>
                 :
                 <IconButton onClick={() => setCambiarBuscador(true)}>
-                    <img src={Search} alt="Buscador" className="Search"></img>
+                    <img src={Search} alt="Buscador" className={classes.Search}></img>
                 </IconButton>
             }
 
             <IconButton>
-                <img src={Users} alt="Contacto" className="Users" />
+                <img src={Users} alt="Contacto" className={classes.Users} />
             </IconButton >
 
             <IconButton onClick={() => setAbrirCarrito(!abrirCarrito)} >
-                <img src={Cart} alt="Carrito" className="Cart" />
+                <img src={Cart} alt="Carrito" className={classes.Cart} />
             </IconButton>
             {abrirCarrito &&
                 <Modal

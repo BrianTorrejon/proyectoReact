@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Grid, Container } from "@mui/material";
-import "./Footer.css";
-import "../Nav/Nav.css";
+import { Box, Grid } from "@mui/material";
 import Logo from "../../Imagenes/Logo.png";
 import { makeStyles } from '@material-ui/core';
 
@@ -24,7 +22,23 @@ h3: {
 },
 li: {
   fontSize: '15px'
-}
+},
+NombreMarca: {
+  boxSizing:'border-box',
+  padding: '0',
+  margin: '0',
+  paddingLeft: '10px',
+  marginTop: '90px',
+  color: '#503BD9',
+},
+  Marca: {
+    width: '72px',
+    height: '72px',
+    backgroundRepeat: 'no-repeat',
+    marginLeft: '50px',
+    marginTop:'20px', 
+    position: 'absolute'
+  }
 })
 
 function Footer() {
@@ -36,9 +50,9 @@ function Footer() {
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
         <Grid container spacing={3}>
-          <Grid item sm xs={12}>
-            <img src={Logo} alt="Logo" className="Marca" />
-            <Box className="NombreMarca">
+          <Grid item sm xs= "auto">
+            <img src={Logo} alt="Logo" className={classes.Marca} />
+            <Box className={classes.NombreMarca}>
               <h1>Sound On</h1>
             </Box>
           </Grid>

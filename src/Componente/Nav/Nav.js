@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar, Box, IconButton, useTheme, useMediaQuery } from "@mui/material";
-import "./Nav.css";
 import LogoyMarca from "./LogoyMarca.js";
 import IconosNav from "./IconosNav.js";
 import Botones from "./Buttoms.js";
 import DrawerComponent from "./Iconbutton";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import { makeStyles } from '@material-ui/core';
 
+const useStyle = makeStyles({
+Navbar: {
+   height: '120px'
+}
+})
 
 function Nav() {
   const [openDrawer, setOpenDrawer] = useState(true); //
@@ -14,9 +19,12 @@ function Nav() {
   //Theme instance
   const theme = useTheme(); 
   const matches = useMediaQuery(theme.breakpoints.down("sm")); 
+  const classes = useStyle();
 
   return (<>
-      <AppBar className="Navbar" position="sticky">
+ 
+
+      <AppBar className={classes.Navbar} position="sticky">
         <Toolbar>
           {/* Logo y Marca */}
           <LogoyMarca />

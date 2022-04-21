@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
-import "./Carrousel.css";
 import {
   Card,
   CardContent,
@@ -9,6 +8,73 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
+import { makeStyles } from '@material-ui/core';
+
+const useStyle = makeStyles({
+Banner: {
+  height: '400px',
+  position: 'relative'
+},
+Banner, Media: {
+  backgroundColor:'white',
+  height: '100%',
+  overflow: 'hidden',
+  position: 'relative',
+  transition: '300ms',
+  cursor: 'pointer'
+},
+Banner, Media, MediaCaption: {
+  textOverflow: 'ellipsis',
+  position: 'absolute',
+  bottom: '0',
+  padding: '15px',
+  backgroundColor: 'black',
+  color: 'white',
+  opacity: '0.6',
+  width: '100%',
+  height: '10%',
+  fontSize: '36px',
+  fontWeight: '200',
+  transition: '300ms',
+  cursor: 'pointer',
+'&:hover': {
+  opacity: '0.8'
+}
+},
+Banner, BannerGrid: {
+  height: '100%',
+  position: 'relative'
+},
+Banner, content: {
+  color: 'white',
+  backgroundColor: 'red',
+  height: '100%',
+  position: 'relative',
+  cursor: 'pointer',
+  padding: '30px',
+  transition: '300ms'
+},
+Banner, content: {
+  backgroundColor: 'tomato'
+},
+Banner,  content, title: {
+  fontSize: '42px',
+  fontWeight: '500'
+},
+Banner, content, Caption: {
+  marginTop: '10px',
+  fontSize: '24px'
+},
+Banner, content: {
+  marginTop: '40px',
+  color: 'white',
+  fontSize: '24px',
+  border: '3px solid white',
+  textTransform: 'capitalize',
+  transition: '200ms'
+}
+})
+
 
 function Banner(props) {
   if (props.newProp) console.log(props.newProp);
@@ -17,24 +83,24 @@ function Banner(props) {
     : "left";
   const totalItems = props.length ? props.length : 3;
   const mediaLength = totalItems - 1;
-
+  
   let items = [];
   const content = (
     <Grid item xs={12 / totalItems} key="content">
-      <CardContent className="Content">
-        <Typography className="Title">{props.item.Name}</Typography>
-        <Typography className="Caption">{props.item.Caption}</Typography>
+      <CardContent className={classes.content}>
+        <Typography className={classes.title}>{props.item.Name}</Typography>
+        <Typography className={classes.Caption}>{props.item.Caption}</Typography>
       </CardContent>
     </Grid>
   );
-
+  const classes = useStyle();
   for (let i = 0; i < mediaLength; i++) {
     const item = props.item.Items[i];
 
     const media = (
       <Grid item xs={12 / totalItems} key={item.Name}>
-        <CardMedia className="Media" image={item.Image} title={item.Name}>
-          <Typography className="MediaCaption">{item.Name}</Typography>
+        <CardMedia className={classes.Media} image={item.Image} title={item.Name}>
+          <Typography className={classes.MediaCaption}>{item.Name}</Typography>
         </CardMedia>
       </Grid>
     );
@@ -50,8 +116,8 @@ function Banner(props) {
   }
 
   return (
-    <Card raised className="Banner">
-      <Grid container spacing={0} className="BannerGrid">
+    <Card raised className={classes.Banner}>
+      <Grid container spacing={0} className={classes.BannerGrid}>
         {items}
       </Grid>
     </Card>
@@ -170,7 +236,7 @@ class BannerExample extends React.Component {
       <div style={{ marginTop: "50px", color: "#494949" }}>
 
         <Carousel
-          className="Example"
+          className={classes.Example}
           autoPlay={this.state.autoPlay}
           animation={this.state.animation}
           indicators={this.state.indicators}
