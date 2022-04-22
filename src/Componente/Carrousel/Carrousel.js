@@ -1,77 +1,74 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Grid,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 import { makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles({
-Banner: {
-  height: '400px',
-  position: 'relative'
-},
-Banner, Media: {
-  backgroundColor:'white',
-  height: '100%',
-  overflow: 'hidden',
-  position: 'relative',
-  transition: '300ms',
-  cursor: 'pointer'
-},
-Banner, Media, MediaCaption: {
-  textOverflow: 'ellipsis',
-  position: 'absolute',
-  bottom: '0',
-  padding: '15px',
-  backgroundColor: 'black',
-  color: 'white',
-  opacity: '0.6',
-  width: '100%',
-  height: '10%',
-  fontSize: '36px',
-  fontWeight: '200',
-  transition: '300ms',
-  cursor: 'pointer',
-'&:hover': {
-  opacity: '0.8'
-}
-},
-Banner, BannerGrid: {
-  height: '100%',
-  position: 'relative'
-},
-Banner, content: {
-  color: 'white',
-  backgroundColor: 'red',
-  height: '100%',
-  position: 'relative',
-  cursor: 'pointer',
-  transition: '300ms'
-},
-Banner, content: {
-  backgroundColor: 'tomato'
-},
-Banner,  content, title: {
-  fontSize: '42px',
-  fontWeight: '500'
-},
-Banner, content, Caption: {
-  marginTop: '10px',
-  fontSize: '24px'
-},
-Banner, content: {
-  marginTop: '40px',
-  color: 'white',
-  fontSize: '24px',
-  border: '3px solid white',
-  textTransform: 'capitalize',
-  transition: '200ms'
-}
+  Banner: {
+    height: '400px',
+    position: 'relative'
+  },
+/* Banner, */ Media: {
+    backgroundColor: 'white',
+    height: '100%',
+    overflow: 'hidden',
+    position: 'relative',
+    transition: '300ms',
+    cursor: 'pointer',
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+  },
+/* Banner, */ /* Media, */ MediaCaption: {
+    textOverflow: 'ellipsis',
+    position: 'absolute',
+    bottom: '0',
+    padding: '10px',
+    backgroundColor: 'black',
+    color: 'white',
+    opacity: '0.6',
+    width: '100%',
+    height: '10%',
+    fontSize: '36px',
+    fontWeight: '200',
+    transition: '300ms',
+    cursor: 'pointer',
+    '&:hover': {
+      opacity: '0.8'
+    }
+  },
+/* Banner, */ BannerGrid: {
+    height: '100%',
+    position: 'relative'
+  },
+/* Banner, */ /* content: {
+    color: 'white',
+    backgroundColor: 'red',
+    height: '100%',
+    position: 'relative',
+    cursor: 'pointer',
+    transition: '300ms'
+  }, */
+/* Banner, */ /* content: {
+    backgroundColor: 'tomato'
+  }, */
+/* Banner, */  /* content, */ title: {
+    fontSize: '42px',
+    fontWeight: '500'
+  },
+/* Banner, */ /* content, */ Caption: {
+    marginTop: '10px',
+    fontSize: '24px'
+  },
+/* Banner, */ content: {
+    marginTop: '40px',
+    color: 'white',
+    fontSize: '24px',
+    border: '3px solid white',
+    textTransform: 'capitalize',
+    transition: '200ms'
+  }
 })
 
 
@@ -85,7 +82,7 @@ function Banner(props) {
     : "left";
   const totalItems = props.length ? props.length : 3;
   const mediaLength = totalItems - 1;
-  
+
   let items = [];
   const content = (
     <Grid item xs={12 / totalItems} key="content">
@@ -100,10 +97,10 @@ function Banner(props) {
     const item = props.item.Items[i];
 
     const media = (
-      <Grid item xs={12 / totalItems} key={item.Name}>
-        <CardMedia className={classes.Media} image={item.Image} title={item.Name}>
+      <Grid item xs={12 / totalItems} key={item.Name} >
+        <Grid item className={classes.Media} title={item.Name} style={{ backgroundImage: "url(" + item.Image + ")" }}>
           <Typography className={classes.MediaCaption}>{item.Name}</Typography>
-        </CardMedia>
+        </Grid >
       </Grid>
     );
     items.push(media);
@@ -129,7 +126,7 @@ function Banner(props) {
 const items = [
   {
     Name: "All of us loves all of you, and we'll take to you success",
-    Image: "https://e7.pngegg.com/pngimages/295/235/png-clipart-tom-lee-music-vancouver-canadian-music-hall-of-fame-musical-instruments-musical-instruments-text-trademark.png", 
+    Image: "https://e7.pngegg.com/pngimages/295/235/png-clipart-tom-lee-music-vancouver-canadian-music-hall-of-fame-musical-instruments-musical-instruments-text-trademark.png",
     contentPosition: "left",
     Items: [
       {
@@ -238,7 +235,7 @@ class BannerExample extends React.Component {
       <div style={{ marginTop: "50px", color: "#494949" }}>
 
         <Carousel
-          className= "Example"
+          className="Example"
           autoPlay={this.state.autoPlay}
           animation={this.state.animation}
           indicators={this.state.indicators}
@@ -246,21 +243,21 @@ class BannerExample extends React.Component {
           cycleNavigation={this.state.cycleNavigation}
           navButtonsAlwaysVisible={this.state.navButtonsAlwaysVisible}
           navButtonsAlwaysInvisible={this.state.navButtonsAlwaysInvisible}
-          next={(now, previous) =>
-            console.log(
-              `Next User Callback: Now displaying child${now}. Previously displayed child${previous}`
-            )
-          }
-          prev={(now, previous) =>
-            console.log(
-              `Prev User Callback: Now displaying child${now}. Previously displayed child${previous}`
-            )
-          }
-          onChange={(now, previous) =>
-            console.log(
-              `OnChange User Callback: Now displaying child${now}. Previously displayed child${previous}`
-            )
-          }
+        /* next={(now, previous) =>
+          console.log(
+            `Next User Callback: Now displaying child${now}. Previously displayed child${previous}`
+          )
+        }
+        prev={(now, previous) =>
+          console.log(
+            `Prev User Callback: Now displaying child${now}. Previously displayed child${previous}`
+          )
+        }
+        onChange={(now, previous) =>
+          console.log(
+            `OnChange User Callback: Now displaying child${now}. Previously displayed child${previous}`
+          )
+        } */
         >
           {items.map((item, index) => {
             return (

@@ -21,7 +21,6 @@ const PaginaInstrumentos = () => {
                         <Grid item xs={12} md={6} lg={3} key={producto.id}>
                             <Tarjeta
                                 offer={producto}
-                                url="productos"
                                 agregarAlCarrito={agregarAlCarrito} />
                         </Grid>
                     )

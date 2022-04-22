@@ -38,14 +38,14 @@
     },
     {
       "id": 5,
-      "nombre": "Amplificador MG15GFX para guitarra de 15W",
+      "nombre": "Amplificador MG15GFX",
       "precio": 45000,
       "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_615266-MLA44295972464_122020-F.webp",
       "marca": "Marshall"
     },
     {
       "id": 6,
-      "nombre": "Guitarra Clasica Criolla ", 
+      "nombre": "Guitarra Clasica Criolla",
       "precio": 10000,
       "urlImg": "https://images.unsplash.com/photo-1581286651277-069e75ff5ccd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80",
       "marca": "fender"
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "nombre": "Amplificador Code 25 para guitarra de 25W",
+      "nombre": "Amplificador Code 25",
       "precio": 55000,
       "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_893885-MLA32643464584_102019-F.webp",
       "marca": "Marshall"
@@ -80,7 +80,7 @@
     },
     {
       "id": 11,
-      "nombre": "Bateria Spirit Of Maiden 5 ",
+      "nombre": "Bateria Spirit Of Maiden 5",
       "precio": 220000,
       "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_775615-MLA40365037550_012020-F.webp",
       "marca": "Premier"
@@ -102,16 +102,32 @@
       "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
       "marca": "Gracia",
       "oferta": true,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Teclado",
+      "precio": 11000,
+      "precioAnterior": "$15.100,00",
+      "urlImg": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Masterkeyboard.jpg",
+      "marca": "Casio",
+      "oferta": true,
       "quantity": 2
     },
     {
-      "id": 2,
-      "nombre": "Bateria",
-      "precio": 20000,
-      "precioAnterior": "$21.500,00",
-      "urlImg": "https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "marca": "Pearl",
-      "oferta": true,
+      "id": 5,
+      "nombre": "Amplificador MG15GFX",
+      "precio": 45000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_615266-MLA44295972464_122020-F.webp",
+      "marca": "Marshall",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Teclado musical",
+      "precio": 95000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_738005-MLA46441750629_062021-F.webp",
+      "marca": "Roland",
       "quantity": 2
     }
   ]

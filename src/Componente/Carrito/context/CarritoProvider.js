@@ -2,7 +2,8 @@ import { createContext, useReducer } from "react";
 import axios from 'axios';
 import { TYPES } from "../actions/shoppingActions"
 import { shoppingReducer, shoppingInitialState } from "../reducer/shoppingReducer"
-import React from 'react'
+import React from 'react';
+import swal from 'sweetalert';
 
 export const CarritoContext = createContext()
 
@@ -11,6 +12,15 @@ const CarritoProvider = ({ children }) => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
 
     const { products, cart } = state
+
+    const seAgregoalCart = () => {
+        swal({
+            text: "El Instrumento se agrego correctamente",
+            icon: "success",
+            button: "Aceptar",
+            timer: "3000"
+        });
+    }
 
     const actualizarStado = async () => {
         const productsURL = "http://localhost:3000/productos";
@@ -90,6 +100,8 @@ const CarritoProvider = ({ children }) => {
             let res = await axios(endpoint, options);
             let itemData = await res.data;
 
+            seAgregoalCart();
+
             dispatch({ type: TYPES.ADD_TO_CART, payload: { itemData } })
 
 
@@ -101,6 +113,8 @@ const CarritoProvider = ({ children }) => {
             };
             let res = await axios("http://localhost:3000/cart", options);
             let itemData = await res.data;
+
+            seAgregoalCart();
 
             dispatch({ type: TYPES.ADD_TO_CART, payload: { itemData } })
         }

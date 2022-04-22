@@ -5,40 +5,40 @@ import { makeStyles } from '@material-ui/core';
 import Pie from "../../Imagenes/Pie.png";
 
 const useStyle = makeStyles({
-PiePagina: {
-  backgroundImage: 'url(../../Imagenes/Pie.png)',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  color: '#FF2E15',
-  fontSize: '20px',
-  opacity: '80%'
+  PiePagina: {
+    backgroundImage: "url(" + Pie + ")",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    color: '#FF2E15',
+    fontSize: '20px',
+    opacity: '80%'
 
-  
-},
-h3: {
-  boxSizing:'border-box ',
-  padding: '0',
-  margin: '0',
-  fontSize: '20px'
-},
-li: {
-  fontSize: '15px'
-},
-NombreMarca: {
-  boxSizing:'border-box',
-  padding: '0',
-  margin: '0',
-  paddingLeft: '10px',
-  marginTop: '90px',
-  color: '#503BD9',
-},
+
+  },
+  h3: {
+    boxSizing: 'border-box ',
+    padding: '0',
+    margin: '0',
+    fontSize: '20px'
+  },
+  li: {
+    fontSize: '15px'
+  },
+  NombreMarca: {
+    boxSizing: 'border-box',
+    padding: '0',
+    margin: '0',
+    paddingLeft: '10px',
+    marginTop: '90px',
+    color: '#503BD9',
+  },
   Marca: {
     width: '72px',
     height: '72px',
     backgroundRepeat: 'no-repeat',
     marginLeft: '50px',
-    marginTop:'20px', 
+    marginTop: '20px',
     position: 'absolute'
   }
 })
@@ -48,11 +48,11 @@ function Footer() {
   const classes = useStyle();
 
   return (
-    <footer className={classes.PiePagina} src={Pie} alt= "Pie de Pagina">
+    <footer className={classes.PiePagina} src={Pie} alt="Pie de Pagina" >
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
         <Grid container spacing={3}>
-          <Grid item sm xs= "auto">
+          <Grid item sm xs="auto">
             <img src={Logo} alt="Logo" className={classes.Marca} />
             <Box className={classes.NombreMarca}>
               <h1>Sound On</h1>
