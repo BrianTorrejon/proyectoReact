@@ -1,15 +1,16 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
-import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
+import { Card, CardContent, Typography, Grid } from "@mui/material";
 import { makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles({
   Banner: {
     height: '400px',
-    position: 'relative'
+    position: 'relative',
+    backgroundColor: 'tomato'
   },
-/* Banner, */ Media: {
+  Media: {
     backgroundColor: 'white',
     height: '100%',
     overflow: 'hidden',
@@ -20,7 +21,7 @@ const useStyle = makeStyles({
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
   },
-/* Banner, */ /* Media, */ MediaCaption: {
+ MediaCaption: {
     textOverflow: 'ellipsis',
     position: 'absolute',
     bottom: '0',
@@ -30,7 +31,7 @@ const useStyle = makeStyles({
     opacity: '0.6',
     width: '100%',
     height: '10%',
-    fontSize: '36px',
+    fontSize: '72px',
     fontWeight: '200',
     transition: '300ms',
     cursor: 'pointer',
@@ -38,36 +39,23 @@ const useStyle = makeStyles({
       opacity: '0.8'
     }
   },
-/* Banner, */ BannerGrid: {
+ BannerGrid: {
     height: '100%',
     position: 'relative'
   },
-/* Banner, */ /* content: {
-    color: 'white',
-    backgroundColor: 'red',
-    height: '100%',
-    position: 'relative',
-    cursor: 'pointer',
-    transition: '300ms'
-  }, */
-/* Banner, */ /* content: {
-    backgroundColor: 'tomato'
-  }, */
-/* Banner, */  /* content, */ title: {
-    fontSize: '42px',
-    fontWeight: '500'
-  },
-/* Banner, */ /* content, */ Caption: {
+  Caption: {
     marginTop: '10px',
-    fontSize: '24px'
+    fontSize: '72px'
   },
-/* Banner, */ content: {
-    marginTop: '40px',
+  content: {
+    marginTop: '52px',
     color: 'white',
-    fontSize: '24px',
+    fontSize: '48px',
     border: '3px solid white',
     textTransform: 'capitalize',
-    transition: '200ms'
+    transition: '200ms',
+    backgroundColor: 'tomato',
+    height: '350px',
   }
 })
 
@@ -160,7 +148,7 @@ const items = [
     contentPosition: "right",
     Items: [
       {
-        Name: "hricane",
+        Name: "HRICANE",
         Image: "https://musicmakers.pro/wp-content/uploads/2020/07/marcas_0007_Capa-4.png"
       },
       {

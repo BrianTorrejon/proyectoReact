@@ -13,8 +13,6 @@ const useStyle = makeStyles({
     color: '#FF2E15',
     fontSize: '20px',
     opacity: '80%'
-
-
   },
   h3: {
     boxSizing: 'border-box ',
@@ -26,16 +24,12 @@ const useStyle = makeStyles({
     fontSize: '15px'
   },
   NombreMarca: {
-    boxSizing: 'border-box',
-    padding: '0',
-    margin: '0',
-    paddingLeft: '10px',
     marginTop: '90px',
-    color: '#503BD9',
+    color: '#503BD9'
   },
   Marca: {
-    width: '72px',
-    height: '72px',
+    width: '80px',
+    height: '80px',
     backgroundRepeat: 'no-repeat',
     marginLeft: '50px',
     marginTop: '20px',
@@ -51,12 +45,10 @@ function Footer() {
     <footer className={classes.PiePagina} src={Pie} alt="Pie de Pagina" >
       <Box px={{ xs: 1, sm: 5 }}
         py={{ xs: 3, sm: 22.5 }}>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           <Grid item sm xs="auto">
             <img src={Logo} alt="Logo" className={classes.Marca} />
-            <Box className={classes.NombreMarca}>
-              <h1>Sound On</h1>
-            </Box>
+            <Box className={classes.NombreMarca}><h1>Sound On</h1></Box>
           </Grid>
           <Grid item sm xs={6}>
             <Box>
