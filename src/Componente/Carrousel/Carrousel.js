@@ -51,7 +51,6 @@ Banner, content: {
   height: '100%',
   position: 'relative',
   cursor: 'pointer',
-  padding: '30px',
   transition: '300ms'
 },
 Banner, content: {
@@ -77,6 +76,9 @@ Banner, content: {
 
 
 function Banner(props) {
+
+  const classes = useStyle();
+
   if (props.newProp) console.log(props.newProp);
   const contentPosition = props.contentPosition
     ? props.contentPosition
@@ -93,7 +95,7 @@ function Banner(props) {
       </CardContent>
     </Grid>
   );
-  const classes = useStyle();
+
   for (let i = 0; i < mediaLength; i++) {
     const item = props.item.Items[i];
 
@@ -236,7 +238,7 @@ class BannerExample extends React.Component {
       <div style={{ marginTop: "50px", color: "#494949" }}>
 
         <Carousel
-          className={classes.Example}
+          className= "Example"
           autoPlay={this.state.autoPlay}
           animation={this.state.animation}
           indicators={this.state.indicators}

@@ -47,11 +47,6 @@ Search: {
 }
 })
 
-const productsAdded = () => {
-    this.setState({
-      productsAdded: true
-    })
-  }
 
   
 
@@ -88,7 +83,7 @@ const IconosNav = ({ offer }) => {
 
             <IconButton onClick={() => setAbrirCarrito(!abrirCarrito)} >
                 <img src={Cart} alt="Carrito" className={classes.Cart} />
-                productsAdded={this.state.agregarAlCarrito(offer)}
+               
             </IconButton>
             {abrirCarrito &&
                 <Modal

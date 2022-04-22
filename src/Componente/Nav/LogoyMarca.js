@@ -10,7 +10,7 @@ const useStyle = makeStyles({
     margin: '0',
     paddingLeft: '16px',
     marginTop: '90px',
-    color: '#503BD9',
+    color: '#FFC745',
   },
     Marca: {
       width: '72px',

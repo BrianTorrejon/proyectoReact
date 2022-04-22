@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid, makeStyles } from '@material-ui/core';
+import swal from 'sweetalert';
+
 
 const useStyle = makeStyles({
   root: {
@@ -46,6 +48,14 @@ const useStyle = makeStyles({
   }
 })
 
+const seAgregoalCart=()=> {
+  swal ({
+    text: "El Instrumento se agrego correctamente",
+    icon: "success" ,
+    button: "Aceptar",
+    timer: "3000"
+    });
+}
 const Tarjeta = ({ offer, agregarAlCarrito }) => {
 
   const classes = useStyle();
@@ -101,6 +111,10 @@ const Tarjeta = ({ offer, agregarAlCarrito }) => {
             <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() => agregarAlCarrito(offer)}>
               Agregar al Carrito
             </Button>
+            { <Button onClick={() => agregarAlCarrito(offer)}></Button>
+            ? <Button onClick={() => seAgregoalCart}></Button>
+            : null
+            }
           </Box>
         </Grid>
       </CardActions>
