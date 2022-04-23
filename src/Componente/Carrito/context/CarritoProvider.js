@@ -34,17 +34,29 @@ const CarritoProvider = ({ children }) => {
     }
 
     const limpiarCarrito = async () => {
-
-        cart.map(async item => {
-            let endpoint = `http://localhost:3000/cart/${item.id}`;
-            let options = {
-                method: "DELETE",
-                headers: { "content-type": "application/json" }
-            };
-            let res = await axios(endpoint, options)
+        swal({
+            title: "Eliminar",
+            text: "Esta seguro que desea elimianr todos los productos del carrito",
+            icon: "warning",
+            buttons: ["No", "si"]
         })
-
-        dispatch({ type: TYPES.CLEAR_CART })
+            .then(respuesta => {
+                if (respuesta) {
+                    cart.map(async item => {
+                        let endpoint = `http://localhost:3000/cart/${item.id}`;
+                        let options = {
+                            method: "DELETE",
+                            headers: { "content-type": "application/json" }
+                        };
+                        let res = await axios(endpoint, options)
+                    })
+                    dispatch({ type: TYPES.CLEAR_CART })
+                    swal({
+                        text: "Se elimino el instrumento",
+                        icon: "success"
+                    })
+                }
+            })
     }
 
     const eliminarProducto = async (data, all = false) => {
@@ -123,9 +135,9 @@ const CarritoProvider = ({ children }) => {
     const data = { state, products, cart, actualizarStado, limpiarCarrito, eliminarProducto, agregarAlCarrito }
 
     return (
-        <CarritoContext.Provider value={data}>
+        <CarritoContext.Provider value={data} >
             {children}
-        </CarritoContext.Provider>
+        </CarritoContext.Provider >
     )
 }
 
