@@ -47,7 +47,7 @@ const Ventajas = () => {
                     <TarjetaVentaja
                         icon={<WorkspacePremiumOutlinedIcon />}
                         titulo='Calidad'
-                        texto='Contamos con un staff 100% calificado, y aseguramos la calidad de los instrumentos y sus respectivos accesorios' />
+                        texto='Contamos con un staff 100% calificado, y aseguramos la calidad de los instrumentos y sus respectivos accesorios.' />
                 </Grid>
             </Box>
         </>
