@@ -93,5 +93,16 @@
       "marca": "Moon Midi"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 1,
+      "nombre": "Guitarra",
+      "precio": 4000,
+      "precioAnterior": "$5.000,00",
+      "urlImg": "https://images.unsplash.com/photo-1558098329-a11cff621064?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=390&q=80",
+      "marca": "Gracia",
+      "oferta": true,
+      "quantity": 1
+    }
+  ]
 }

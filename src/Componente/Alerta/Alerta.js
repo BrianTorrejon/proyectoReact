@@ -13,18 +13,23 @@ const useStyles = makeStyles({
     height: '50px',
     "& .MuiAlert-action": { //Hace referencia al div que contiene el action del alert
       margin: 0,
-      padding: 0
+      padding: 0,
+      color: '#000000'
     },
     "& .MuiAlert-message": { //Hace referencia al mensaje del alert
       width: '100%',
       textAlign: 'center',
-      color: '#001217'
+      color: '#000000',
     }
   },
   caja: {
     width: '100%',
     fontSize: '14px',
-    color: '#E66EB2'
+    color: '#E66EB2',
+    backgroundColor: "#F05228",
+    "& .MuiPaper-root": {
+      backgroundColor: "#F05228",
+    }
   }
 });
 
