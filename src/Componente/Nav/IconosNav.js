@@ -43,7 +43,7 @@ Search: {
   width: '48px',
  '&:hover': {
     transform: 'scale(1.15)'
- } 
+ },
 }
 })
 
