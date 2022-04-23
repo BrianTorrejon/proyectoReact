@@ -11,16 +11,15 @@ import { Box, Grid, makeStyles } from '@material-ui/core';
 
 const useStyle = makeStyles({
   root: {
-    maxWidth: 280,
+    width: 280,
     height: 335,
-    borderRadius: 20
+    borderRadius: 20,
+    "& .MuiCardMedia-root": {
+      backgroundSize: 'contain'
+    }
   },
   media: {
     width: 280,
-    height: 160
-  },
-  mediaLarge: {
-    width: 100,
     height: 160
   },
   nombre: {
@@ -53,59 +52,42 @@ const Tarjeta = ({ offer, agregarAlCarrito }) => {
   const [width, setwidth] = useState(0)
   const [height, setheight] = useState(0)
 
-  function getMeta(url) {
-    var img = new Image();
-    img.onload = function () {
-      setwidth(Number(this.width))
-      setheight(Number(this.height))
-    };
-    img.src = url;
-  }
-
-  getMeta(offer.urlImg)
-
   return (
-    <><Card className={classes.root}>
-      <CardActionArea>
-        {height > width ? //Verifica que la altura de la img sea mayor al ancho de la img y le da un width correspondiente
+    <>
+      <Card className={classes.root}>
+        <CardActionArea>
           <CardMedia
-            className={classes.mediaLarge}
-            image={offer.urlImg}
-            title="Instrumento" />
-
-          : <CardMedia
             className={classes.media}
             image={offer.urlImg}
-            title="Instrumento" />}
-
-        <CardContent>
-          <Typography gutterBottom component="h2" className={classes.nombre}>
-            {offer.nombre}
-          </Typography>
-          <Grid container alignItems="center" spacing={1} justifyContent="center">
-            <Grid item>
-              <Typography variant="body1" component="p" className={classes.precio}>
-                ${offer.precio},00
-              </Typography>
+            title="Instrumento" />
+          <CardContent>
+            <Typography gutterBottom component="h2" className={classes.nombre}>
+              {offer.nombre}
+            </Typography>
+            <Grid container alignItems="center" spacing={1} justifyContent="center">
+              <Grid item>
+                <Typography variant="body1" component="p" className={classes.precio}>
+                  ${offer.precio},00
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body2" color="textSecondary" className={classes.precioAnt}>
+                  <strike>{offer.precioAnterior}</strike>
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="body2" color="textSecondary" className={classes.precioAnt}>
-                <strike>{offer.precioAnterior}</strike>
-              </Typography>
-            </Grid>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Grid container justifyContent="center">
+            <Box width="90%">
+              <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() => agregarAlCarrito(offer)}>
+                Agregar al Carrito
+              </Button>
+            </Box>
           </Grid>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Grid container justifyContent="center">
-          <Box width="90%">
-            <Button disableElevation variant="contained" size="small" fullWidth className={classes.boton} onClick={() => agregarAlCarrito(offer)}>
-              Agregar al Carrito
-            </Button>
-          </Box>
-        </Grid>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
     </>
   );
 }

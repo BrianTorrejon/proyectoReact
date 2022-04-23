@@ -95,19 +95,11 @@
   ],
   "cart": [
     {
-      "id": 8,
-      "nombre": "Teclado musical",
-      "precio": 95000,
-      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_738005-MLA46441750629_062021-F.webp",
-      "marca": "Roland",
-      "quantity": 1
-    },
-    {
-      "id": 7,
-      "nombre": "Microfono Dinamico Multifuncion",
-      "precio": 7000,
-      "urlImg": "https://images.unsplash.com/photo-1607033379710-044f964ccfde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-      "marca": "Shure",
+      "id": 5,
+      "nombre": "Amplificador MG15GFX",
+      "precio": 45000,
+      "urlImg": "https://http2.mlstatic.com/D_NQ_NP_2X_615266-MLA44295972464_122020-F.webp",
+      "marca": "Marshall",
       "quantity": 1
     }
   ]
