@@ -52,7 +52,7 @@ const Mision = () => {
         <Box>
             <Grid container className={classes.contenedor} spacing={8}>
                 <Grid item xs={12} sm={6} className={classes.grid}>
-                    <Typography variant='h4' className={classes.titulo}><span className={classes.span}>¿Quieres formar parte</span> del mundo de la música?</Typography>
+                    <Typography variant='h4' className={classes.titulo}><span className={classes.span}>¿Queres formar parte</span> del mundo de la música?</Typography>
                     <Typography component='div' >
                         <Box sx={{ fontWeight: 'bold' }}>
                             Nuesta misión es conectar a las personas con el mundo de la música a través de los diversos intrumentos que ofrecemos.
@@ -92,7 +92,7 @@ const Mision = () => {
                         </ListItem>
                     </List>
 
-                    <Button className={classes.boton} onClick="/PaginaInstrumentos" >Descubre nuestros intrumentos</Button>
+                    <Button className={classes.boton} url="/PaginaInstrumentos" >Descubre nuestros intrumentos</Button>
                 </Grid>
                 <Grid item className={classes.imagen} xs={12} sm={6} />
 
